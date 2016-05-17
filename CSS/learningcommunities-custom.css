@@ -377,7 +377,7 @@ section.article-header div.header-content {
 @media screen {
   section.article-header div.header-content h1,
   section.article-header div.header-content h2 {
-    color: #ffffff;
+    color: #fff;
   }
   section.article-header div.header-content h1 {
     font-size: 70px;
@@ -399,7 +399,7 @@ section.article-header div.header-content {
     border: 1px solid white;
     font-size: 1.35rem;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #fff;
     text-shadow: 0 0.3333px 0 #afafaf, 0 0.6667px 0 #989898, 0 1px 0 #7f7f7f, 0 1.3333px 0 #686868, 0 1.6667px 0 #4f4f4f, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
     /*.rgb-black(); text-shadow: 0 .5px 0 #aaa, 0 1px 0 #888,
                      0 1.5px .5px rgba(@rval,@gval,@bval,.1),
@@ -1382,10 +1382,10 @@ div.column dl.faq dt:after {
 }
 div.column dl.faq dt:hover {
   background-color: #5e6a71;
-  color: #ffffff;
+  color: #fff;
 }
 div.column dl.faq dt:hover:after {
-  border-top: 8px solid #ffffff;
+  border-top: 8px solid #fff;
   border-right: 8px solid transparent;
   border-bottom: none;
   border-left: 8px solid transparent;
@@ -1402,12 +1402,12 @@ div.column dl.faq dt.activated:after {
 }
 div.column dl.faq dt.activated:hover {
   background-color: #725764;
-  color: #ffffff;
+  color: #fff;
 }
 div.column dl.faq dt.activated:hover:after {
   border-top: none;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid #ffffff;
+  border-bottom: 8px solid #fff;
   border-left: 8px solid transparent;
 }
 div.column dl.toggled dd {
@@ -1524,7 +1524,7 @@ div.column a.pop-out-link:hover {
 }
 div.column a.dark-red-button {
   display: block;
-  color: #ffffff;
+  color: #fff;
   background-color: #981e32;
   text-transform: uppercase;
   font-size: 1em;
@@ -1562,10 +1562,10 @@ div.column a[data-title]:hover:after {
   top: 100%;
   padding: 4px 8px;
   background: #eddccc;
-  background: -webkit-linear-gradient(top, #eddccc, #ffffff);
-  background: -moz-linear-gradient(top, #eddccc, #ffffff);
-  background: -o-linear-gradient(top, #eddccc, #ffffff);
-  background: linear-gradient(top, #eddccc, #ffffff);
+  background: -webkit-linear-gradient(top, #eddccc, #fff);
+  background: -moz-linear-gradient(top, #eddccc, #fff);
+  background: -o-linear-gradient(top, #eddccc, #fff);
+  background: linear-gradient(top, #eddccc, #fff);
   border: 1px solid #925b29;
   color: #464e54;
   z-index: 20;
@@ -1701,7 +1701,7 @@ div.interactively-flipped-panels div.container {
   padding-bottom: 48%;
   padding-bottom: calc(((50% * 0.6) * 0.8 - 1.5em) * 2 + 3em);
   margin: 1em auto;
-  background: #ffffff;
+  background: #fff;
   overflow: hidden;
 }
 @media all and (max-width: 1030px) and (min-width: 792px) {
@@ -1884,51 +1884,51 @@ div.interactively-flipped-panels div.container div.panel-wrapper div.panel div.r
 }
 div.interactively-flipped-panels div.container div.panel-wrapper div.panel.green div.rear {
   background-color: #564c20;
-  color: #ffffff;
+  color: #fff;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper div.panel.green div.front {
   background-color: #ada400;
-  color: #000000;
+  color: #000;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper div.panel.yellow div.rear {
   background-color: #77580c;
-  color: #ffffff;
+  color: #fff;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper div.panel.yellow div.front {
   background-color: #ffb81c;
-  color: #000000;
+  color: #000;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper div.panel.orange div.rear {
   background-color: #6d441f;
-  color: #ffffff;
+  color: #fff;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper div.panel.orange div.front {
   background-color: #f6861f;
-  color: #000000;
+  color: #000;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper div.panel.blue div.rear {
   background-color: #2f5055;
-  color: #ffffff;
+  color: #fff;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper div.panel.blue div.front {
   background-color: #00a5bd;
-  color: #000000;
+  color: #000;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper div.panel.gray div.rear {
   background-color: #2a3033;
-  color: #ffffff;
+  color: #fff;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper div.panel.gray div.front {
   background-color: #eff0f1;
-  color: #000000;
+  color: #000;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper div.panel.crimson div.rear {
   background-color: #981e32;
-  color: #ffffff;
+  color: #fff;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper div.panel.crimson div.front {
   background-color: #c60c30;
-  color: #000000;
+  color: #000;
 }
 div.interactively-flipped-panels div.container div.panel-wrapper:hover {
   float: none;
@@ -2337,7 +2337,7 @@ ul.content-boxes > li {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+  background-color: #fff;
   list-style-type: none;
 }
 @media all and (max-width: 1205px) {
@@ -2425,18 +2425,18 @@ a.vpue-tooltip span b {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
-  box-shadow: inset 0 1px 0 #ffffff;
-  -webkit-box-shadow: inset -1px 1px 0 #ffffff;
-  -moz-box-shadow: inset 0 1px 0 #ffffff;
-  -o-box-shadow: inset 0 1px 0 #ffffff;
+  box-shadow: inset 0 1px 0 #fff;
+  -webkit-box-shadow: inset -1px 1px 0 #fff;
+  -moz-box-shadow: inset 0 1px 0 #fff;
+  -o-box-shadow: inset 0 1px 0 #fff;
   /*display: none;*/
 }
 a.vpue-tooltip > span {
   background: #eddccc;
-  background: -webkit-linear-gradient(top, #eddccc, #ffffff);
-  background: -moz-linear-gradient(top, #eddccc, #ffffff);
-  background: -o-linear-gradient(top, #eddccc, #ffffff);
-  background: linear-gradient(top, #eddccc, #ffffff);
+  background: -webkit-linear-gradient(top, #eddccc, #fff);
+  background: -moz-linear-gradient(top, #eddccc, #fff);
+  background: -o-linear-gradient(top, #eddccc, #fff);
+  background: linear-gradient(top, #eddccc, #fff);
   border: 1px solid #925b29;
   color: #5e6a71;
 }
@@ -2605,7 +2605,7 @@ img.symbolic-image {
  *  ├----------------------------------------------------------------------------------------------┤
  */
 div.column table.plain {
-  background: #ffffff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
+  background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
   border-collapse: separate;
   border-spacing: 0;
   border-top: 1px solid #5e6a71;
@@ -2615,7 +2615,7 @@ div.column table.plain thead tr th {
   padding-top: .25rem;
   padding-left: .25rem;
   padding-bottom: .25rem;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #fff;
   border-bottom: 1px solid #B6BCBF;
   text-align: inherit;
 }
@@ -2624,7 +2624,7 @@ div.column table.plain tbody tr td {
   padding-left: .25rem;
   padding-bottom: .25rem;
   background-color: #eff0f1;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #fff;
   border-bottom: 1px solid #b5babe;
   text-align: inherit;
   vertical-align: top;
@@ -2633,14 +2633,14 @@ div.column table.plain tbody tr:nth-of-type(2n) td {
   padding-top: .25rem;
   padding-left: .25rem;
   padding-bottom: .25rem;
-  background-color: #ffffff;
+  background-color: #fff;
   border-top: 1px solid #eff0f1;
   border-bottom: 1px solid #d7dadb;
   text-align: inherit;
   vertical-align: top;
 }
 div.column table.award-recipients {
-  background: #ffffff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
+  background: #fff url(/wp-content/uploads/sites/906/2015/08/bg-dark.jpg) repeat fixed left top;
   border-collapse: separate;
   border-spacing: 0;
   border-top: 1px solid #5e6a71;
@@ -2650,7 +2650,7 @@ div.column table.award-recipients thead tr th {
   padding-top: .25rem;
   padding-left: .25rem;
   padding-bottom: .25rem;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #fff;
   border-bottom: 1px solid #B6BCBF;
   text-align: inherit;
 }
@@ -2658,7 +2658,7 @@ div.column table.award-recipients tbody tr td {
   padding-top: .25rem;
   padding-left: .25rem;
   padding-bottom: .25rem;
-  background-color: #ffffff;
+  background-color: #fff;
   border-top: 1px solid #eff0f1;
   border-bottom: 1px solid #d7dadb;
   text-align: inherit;
@@ -2669,14 +2669,14 @@ div.column table.award-recipients tbody:nth-of-type(2n) tr td {
   padding-left: .25rem;
   padding-bottom: .25rem;
   background-color: #eff0f1;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #fff;
   border-bottom: 1px solid #b5babe;
   text-align: inherit;
   vertical-align: top;
 }
 div.column table.peopleList {
   width: 100%;
-  background: #ffffff;
+  background: #fff;
   border-collapse: separate;
   border-spacing: 0;
   border-top: 1px solid #e5e5e5;
@@ -2767,7 +2767,7 @@ div.column table.wsu-blue-theme > thead > tr > th {
   padding: 3px;
   background-color: #2f5055;
   vertical-align: bottom;
-  color: #ffffff;
+  color: #fff;
 }
 div.column table.wsu-blue-theme > thead > tr.supra-header-row > th {
   padding-top: 1em;
@@ -2778,14 +2778,14 @@ div.column table.wsu-blue-theme > thead > tr.supra-header-row > th {
   text-indent: -1em;
   font-variant: small-caps;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
 }
 div.column table.wsu-blue-theme:not(.has-row-spans) > tbody > tr:nth-child(2n) > td {
   padding-top: 3px;
   padding-right: 0.5em;
   padding-bottom: 0.5em;
   padding-left: 1.5em;
-  background-color: #ffffff;
+  background-color: #fff;
   text-indent: -1em;
   vertical-align: top;
   line-height: normal;
@@ -2805,7 +2805,7 @@ div.column table.wsu-blue-theme.has-row-spans > tbody:nth-child(2n) > tr > td {
   padding-right: 0.5em;
   padding-bottom: 0.5em;
   padding-left: 1.5em;
-  background-color: #ffffff;
+  background-color: #fff;
   text-indent: -1em;
   vertical-align: top;
   line-height: normal;
@@ -2843,20 +2843,20 @@ div.column table.wsu-gray-theme > thead > tr > th {
   padding: 3px;
   background-color: #5e6a71;
   vertical-align: top;
-  color: #ffffff;
+  color: #fff;
 }
 div.column table.wsu-gray-theme > thead > tr.sub-heading-row > th {
   padding: 3px;
-  background-color: #000000;
+  background-color: #000;
   vertical-align: bottom;
   text-indent: -1em;
   font-variant: small-caps;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
 }
 div.column table.wsu-gray-theme > tbody > tr:nth-child(2n) > td {
   padding: 3px;
-  background-color: #ffffff;
+  background-color: #fff;
   vertical-align: top;
   line-height: normal;
 }
@@ -3331,7 +3331,7 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
   color: #111;
 }
 .qtip-light {
-  background-color: #ffffff;
+  background-color: #fff;
   border-color: #E2E2E2;
   color: #454545;
 }
@@ -3425,14 +3425,14 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
   -webkit-box-shadow: 0 0 3px #333;
   -moz-box-shadow: 0 0 3px #333;
   box-shadow: 0 0 3px #333;
-  color: #ffffff;
+  color: #fff;
   border: 0 solid transparent;
   background: #4A4A4A;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4a4a4a), color-stop(100%, #000000));
-  background-image: -webkit-linear-gradient(top, #4a4a4a 0, #000000 100%);
-  background-image: -moz-linear-gradient(top, #4a4a4a 0, #000000 100%);
-  background-image: -ms-linear-gradient(top, #4a4a4a 0, #000000 100%);
-  background-image: -o-linear-gradient(top, #4a4a4a 0, #000000 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4A4A4A), color-stop(100%, #000));
+  background-image: -webkit-linear-gradient(top, #4A4A4A 0, #000 100%);
+  background-image: -moz-linear-gradient(top, #4A4A4A 0, #000 100%);
+  background-image: -ms-linear-gradient(top, #4A4A4A 0, #000 100%);
+  background-image: -o-linear-gradient(top, #4A4A4A 0, #000 100%);
 }
 .qtip-youtube .qtip-titlebar {
   background-color: transparent;
@@ -3467,17 +3467,17 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
   box-shadow: 0 0 12px #333;
 }
 .qtip-jtools .qtip-titlebar {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171, endColorstr=#4a4a4a);
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171, endColorstr=#4a4a4a);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171, endColorstr=#4A4A4A);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#717171, endColorstr=#4A4A4A);
 }
 .qtip-jtools .qtip-content {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4a4a4a, endColorstr=#232323);
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4a4a4a, endColorstr=#232323);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4A4A4A, endColorstr=#232323);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4A4A4A, endColorstr=#232323);
 }
 .qtip-jtools .qtip-content,
 .qtip-jtools .qtip-titlebar {
   background: 0 0;
-  color: #ffffff;
+  color: #fff;
   border: 0 dashed transparent;
 }
 .qtip-jtools .qtip-icon {
@@ -3496,7 +3496,7 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
 }
 .qtip-cluetip .qtip-titlebar {
   background-color: #87876A;
-  color: #ffffff;
+  color: #fff;
   border: 0 dashed transparent;
 }
 .qtip-cluetip .qtip-icon {
@@ -3509,7 +3509,7 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
 .qtip-tipsy {
   background: #000;
   background: rgba(0, 0, 0, 0.87);
-  color: #ffffff;
+  color: #fff;
   border: 0 solid transparent;
   font-size: 11px;
   font-family: 'Lucida Grande', sans-serif;
@@ -3543,15 +3543,15 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
 }
 .qtip-tipped .qtip-titlebar {
   border-bottom-width: 0;
-  color: #ffffff;
+  color: #fff;
   background: #3A79B8;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#3a79b8), to(#2e629d));
-  background-image: -webkit-linear-gradient(top, #3a79b8, #2e629d);
-  background-image: -moz-linear-gradient(top, #3a79b8, #2e629d);
-  background-image: -ms-linear-gradient(top, #3a79b8, #2e629d);
-  background-image: -o-linear-gradient(top, #3a79b8, #2e629d);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3a79b8, endColorstr=#2e629d);
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3a79b8, endColorstr=#2e629d);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3A79B8), to(#2E629D));
+  background-image: -webkit-linear-gradient(top, #3A79B8, #2E629D);
+  background-image: -moz-linear-gradient(top, #3A79B8, #2E629D);
+  background-image: -ms-linear-gradient(top, #3A79B8, #2E629D);
+  background-image: -o-linear-gradient(top, #3A79B8, #2E629D);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3A79B8, endColorstr=#2E629D);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3A79B8, endColorstr=#2E629D);
 }
 .qtip-tipped .qtip-icon {
   border: 2px solid #285589;
@@ -3566,7 +3566,7 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
   line-height: 20px;
   color: #333;
   padding: 1px;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 6px;
@@ -3610,7 +3610,7 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
   font-weight: 700;
   line-height: 18px;
   color: #000;
-  text-shadow: 0 1px 0 #ffffff;
+  text-shadow: 0 1px 0 #fff;
   opacity: .2;
   filter: alpha(opacity=20);
 }
@@ -3886,7 +3886,7 @@ div.auto-scroller ul li {
   }
 }
 main {
-  background: #ffffff url(/wp-content/uploads/sites/53/2016/05/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
+  background: #fff url(/wp-content/uploads/sites/53/2016/05/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
 }
 @media all and (min-width: 1441px) {
   #binder {

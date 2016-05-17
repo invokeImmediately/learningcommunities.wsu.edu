@@ -3903,6 +3903,11 @@ header.main-header {
   background: #464e54 url(/wp-content/uploads/sites/53/2016/05/background_page-header.jpg) no-repeat scroll center center;
   color: #fff !important;
 }
+@media all and (min-width: 1441px) {
+  header.main-header {
+    border-right: 1px solid rgba(70, 84, 78, 0.5);
+  }
+}
 .main-header sub:not(.unset),
 .main-header sup:not(.unset) {
   color: #fff !important;

@@ -21,8 +21,8 @@ main {
 
 #binder {
     @media all and (min-width: (@v-wdscrn-bckgrnd + 1)) {
-        .rgb-bright-gray(); border-right: 1px solid rgba(@rval, @bval, @gval,0.5);
-        .rgb-darker-gray(); box-shadow: 5px 0 5px rgba(@rval, @bval, @gval,0.5);
+        border-right: 1px solid rgba(red(@hex-darker-gray), blue(@hex-darker-gray), green(@hex-darker-gray),0.5);
+        box-shadow: 5px 0 5px rgba(red(@hex-darkest-gray), blue(@hex-darkest-gray), green(@hex-darkest-gray),0.5);
     }
 }
 
@@ -36,6 +36,9 @@ header.main-header {
     &:extend(.has-dflt-font);
 	background: @hex-darker-gray url(/wp-content/uploads/sites/53/2016/05/background_page-header.jpg) no-repeat scroll center center;
 	color: #fff !important;
+//    @media all and (min-width: (@v-wdscrn-bckgrnd + 1)) {
+//        border-right: 1px solid rgba(red(@hex-darker-gray), blue(@hex-darker-gray), green(@hex-darker-gray),0.5);
+//    }
 }
 
 .main-header sub:not(.unset), .main-header sup:not(.unset) {

@@ -265,8 +265,8 @@ span.accentuated-text {
   right: -1rem;
   bottom: -1rem;
   left: -1rem;
-  background-color: rgba(198, 12, 48, 0);
-  border: 1px solid rgba(198, 12, 48, 0);
+  background-color: rgba(219, 120, 121, 0);
+  border: 1px solid rgba(219, 120, 121, 0);
   z-index: -1;
   -webkit-animation: animFlashHighlight 1.325s linear 1;
   -moz-animation: animFlashHighlight 1.325s linear 1;
@@ -277,95 +277,95 @@ span.accentuated-text {
 }
 @-webkit-keyframes animFlashHighlight {
   0% {
-    background-color: rgba(198, 12, 48, 0);
-    border-color: rgba(198, 12, 48, 0);
+    background-color: rgba(219, 120, 121, 0);
+    border-color: rgba(219, 120, 121, 0);
     z-index: 10;
   }
   10% {
-    background-color: rgba(198, 12, 48, 0.1);
-    border-color: rgba(198, 12, 48, 0.5);
+    background-color: rgba(219, 120, 121, 0.1);
+    border-color: rgba(219, 120, 121, 0.5);
   }
   20% {
-    background-color: rgba(198, 12, 48, 0);
-    border-color: rgba(198, 12, 48, 0);
+    background-color: rgba(219, 120, 121, 0);
+    border-color: rgba(219, 120, 121, 0);
   }
   31% {
-    background-color: rgba(198, 12, 48, 0.1);
-    border-color: rgba(198, 12, 48, 0.5);
+    background-color: rgba(219, 120, 121, 0.1);
+    border-color: rgba(219, 120, 121, 0.5);
   }
   41% {
-    background-color: rgba(198, 12, 48, 0);
-    border-color: rgba(198, 12, 48, 0);
+    background-color: rgba(219, 120, 121, 0);
+    border-color: rgba(219, 120, 121, 0);
   }
   51% {
-    background-color: rgba(198, 12, 48, 0.1);
-    border-color: rgba(198, 12, 48, 0.5);
+    background-color: rgba(219, 120, 121, 0.1);
+    border-color: rgba(219, 120, 121, 0.5);
   }
   100% {
-    background-color: rgba(198, 12, 48, 0);
-    border-color: rgba(198, 12, 48, 0);
+    background-color: rgba(219, 120, 121, 0);
+    border-color: rgba(219, 120, 121, 0);
   }
 }
 @-moz-keyframes animFlashHighlight {
   0% {
-    background-color: rgba(198, 12, 48, 0);
-    border-color: rgba(198, 12, 48, 0);
+    background-color: rgba(219, 120, 121, 0);
+    border-color: rgba(219, 120, 121, 0);
     z-index: 10;
   }
   10% {
-    background-color: rgba(198, 12, 48, 0.1);
-    border-color: rgba(198, 12, 48, 0.5);
+    background-color: rgba(219, 120, 121, 0.1);
+    border-color: rgba(219, 120, 121, 0.5);
   }
   20% {
-    background-color: rgba(198, 12, 48, 0);
-    border-color: rgba(198, 12, 48, 0);
+    background-color: rgba(219, 120, 121, 0);
+    border-color: rgba(219, 120, 121, 0);
   }
   31% {
-    background-color: rgba(198, 12, 48, 0.1);
-    border-color: rgba(198, 12, 48, 0.5);
+    background-color: rgba(219, 120, 121, 0.1);
+    border-color: rgba(219, 120, 121, 0.5);
   }
   41% {
-    background-color: rgba(198, 12, 48, 0);
-    border-color: rgba(198, 12, 48, 0);
+    background-color: rgba(219, 120, 121, 0);
+    border-color: rgba(219, 120, 121, 0);
   }
   51% {
-    background-color: rgba(198, 12, 48, 0.1);
-    border-color: rgba(198, 12, 48, 0.5);
+    background-color: rgba(219, 120, 121, 0.1);
+    border-color: rgba(219, 120, 121, 0.5);
   }
   100% {
-    background-color: rgba(198, 12, 48, 0);
-    border-color: rgba(198, 12, 48, 0);
+    background-color: rgba(219, 120, 121, 0);
+    border-color: rgba(219, 120, 121, 0);
   }
 }
 @keyframes animFlashHighlight {
   0% {
-    background-color: rgba(198, 12, 48, 0);
-    border-color: rgba(198, 12, 48, 0);
+    background-color: rgba(219, 120, 121, 0);
+    border-color: rgba(219, 120, 121, 0);
     z-index: 10;
   }
   10% {
-    background-color: rgba(198, 12, 48, 0.1);
-    border-color: rgba(198, 12, 48, 0.5);
+    background-color: rgba(219, 120, 121, 0.1);
+    border-color: rgba(219, 120, 121, 0.5);
   }
   20% {
-    background-color: rgba(198, 12, 48, 0);
-    border-color: rgba(198, 12, 48, 0);
+    background-color: rgba(219, 120, 121, 0);
+    border-color: rgba(219, 120, 121, 0);
   }
   31% {
-    background-color: rgba(198, 12, 48, 0.1);
-    border-color: rgba(198, 12, 48, 0.5);
+    background-color: rgba(219, 120, 121, 0.1);
+    border-color: rgba(219, 120, 121, 0.5);
   }
   41% {
-    background-color: rgba(198, 12, 48, 0);
-    border-color: rgba(198, 12, 48, 0);
+    background-color: rgba(219, 120, 121, 0);
+    border-color: rgba(219, 120, 121, 0);
   }
   51% {
-    background-color: rgba(198, 12, 48, 0.1);
-    border-color: rgba(198, 12, 48, 0.5);
+    background-color: rgba(219, 120, 121, 0.1);
+    border-color: rgba(219, 120, 121, 0.5);
   }
   100% {
-    background-color: rgba(198, 12, 48, 0);
-    border-color: rgba(198, 12, 48, 0);
+    background-color: rgba(219, 120, 121, 0);
+    border-color: rgba(219, 120, 121, 0);
   }
 }
 html {
@@ -810,7 +810,7 @@ div.column h3.fancy,
   margin-left: 0;
   margin-bottom: 1rem;
   margin-right: 0;
-  background-color: rgba(198, 12, 48, 0.075);
+  background-color: rgba(219, 120, 121, 0.075);
 }
 div.column h3.fancy.with-top-border,
 .gform_heading h3.gform_title.fancy.with-top-border {
@@ -1203,12 +1203,12 @@ div.column p.banner-text-orange-with-towers {
     font-size: 1.15244306rem;
   }
 }
-main section.row > div.column p:not(.no-btm-margin) {
+main section.row > div.column > p:not(.no-btm-margin),
+main section.row > div.column > section > p:not(.no-btm-margin) {
   margin-bottom: 1em;
 }
-main section.row:last-child > div.column > p:last-child,
-main section.row:last-child > div.column > :not(p):last-child > p:last-child,
-main section.row:last-child > div.column > ul[class] > li > p:last-child {
+main section.row > div.column:last-child > div.column > p:last-child,
+main section.row > div.column:last-child > div.column > section > p:last-child {
   margin-bottom: 0;
 }
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -1344,10 +1344,6 @@ div.column {
  */
   /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
  *         │···· HORIZONTAL RULE children of div.column elements ··································· │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- */
-  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- *         │ ···· HYPERLINK elements contained within div.column elements ·························· │
  *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
  */
   /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
@@ -1517,113 +1513,6 @@ div.column hr.does-not-clear {
 }
 div.column hr.thicker {
   border-top-width: 2px;
-}
-div.column a {
-  margin-bottom: -3px;
-  border-bottom: 1px dotted rgba(152, 30, 50, 0.25);
-  color: #981e32;
-  text-decoration: none;
-  transition-property: color, background, border-color;
-  -webkit-transition-property: color, background, border-color;
-  transition-duration: .3s, .3s, .3s;
-  -webkit-transition-duration: .3s, .3s, .3s;
-  transition-timing-function: ease, ease, ease;
-  -webkit-transition-timing-function: ease, ease, ease;
-}
-div.column a:hover {
-  background-color: rgba(239, 120, 121, 0.2);
-  border-color: rgba(152, 30, 50, 0.67);
-  color: #c60c30;
-}
-div.column a.subtle-link {
-  border-bottom: 1px dotted rgba(152, 30, 50, 0);
-  transition-property: border-color;
-  -webkit-transition-property: border-color;
-  transition-duration: .3s;
-  -webkit-transition-duration: .3s;
-  transition-timing-function: ease;
-  -webkit-transition-timing-function: ease;
-}
-div.column a.subtle-link:not(.quiet):hover {
-  border-bottom: 1px dotted rgba(152, 30, 50, 0.67);
-}
-div.column a.pop-out-link {
-  border-bottom: 1px dotted rgba(152, 30, 50, 0.3);
-  color: #981e32;
-  text-decoration: none;
-  transition-property: color, background, font-size;
-  -webkit-transition-property: color, background, font-size, line-height;
-  transition-duration: .4s, .4s, .25s, .25s;
-  -webkit-transition-duration: .4s, .4s, .25s, .25s;
-  transition-timing-function: linear, ease-in, linear, linear;
-  -webkit-transition-timing-function: linear, ease-in, linear, linear;
-}
-div.column a.pop-out-link.subtle-link {
-  border-bottom: none;
-}
-div.column a.pop-out-link:hover {
-  background-color: rgba(211, 130, 53, 0.1);
-  font-size: 1.05em;
-  line-height: calc(1.05em * 1.05);
-  color: #f6861f;
-}
-div.column a.dark-red-button {
-  display: block;
-  color: #fff;
-  background-color: #981e32;
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: background-color 0.3333s linear;
-  padding: 0.5em 1em;
-}
-div.column a.dark-red-button:hover {
-  background-color: #c60c30;
-}
-div.column a img {
-  border: 1px solid rgba(94, 106, 113, 0.5);
-  box-shadow: 2px 2px 2px rgba(94, 106, 113, 0.25);
-  text-decoration: none;
-  transition-property: border, box-shadow;
-  -webkit-transition-property: border, box-shadow;
-  transition-duration: .4s, .4s;
-  -webkit-transition-duration: .4s, .4s;
-  transition-timing-function: linear, ease-in;
-  -webkit-transition-timing-function: linear, ease-in;
-}
-div.column a img:hover {
-  border: 1px solid #981e32;
-  box-shadow: 2px 2px 2px rgba(152, 30, 50, 0.3333);
-}
-div.column a[data-title] {
-  position: relative;
-}
-div.column a[data-title]:hover:after {
-  content: attr(data-title);
-  width: 220px;
-  position: absolute;
-  left: 5px;
-  top: 100%;
-  padding: 4px 8px;
-  background: #eddccc;
-  background: -webkit-linear-gradient(top, #eddccc, #fff);
-  background: -moz-linear-gradient(top, #eddccc, #fff);
-  background: -o-linear-gradient(top, #eddccc, #fff);
-  background: linear-gradient(top, #eddccc, #fff);
-  border: 1px solid #925b29;
-  color: #464e54;
-  z-index: 20;
-}
-div.column:hover a.loud-link {
-  border-bottom: 1px dotted rgba(79, 16, 26, 0.3);
-}
-div.column h1 > a,
-div.column h2 > a,
-div.column h3 > a,
-div.column h4 > a,
-.gform_heading h3.gform_title > a {
-  line-height: 1.35em;
 }
 div.column ul {
   padding-bottom: 0;
@@ -2424,6 +2313,105 @@ ul.cascaded-layout > li.gutter-sizer {
 }
 ul.cascaded-layout > li.gutter-sizer {
   width: 2% !important;
+}
+/*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ *         │ ···· HYPERLINK elements contained within div.column elements ·························· │
+ *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
+ */
+div.column a {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom: 1px solid rgba(152, 30, 50, 0.15);
+  box-shadow: inset 0 -5px 0 rgba(152, 30, 50, 0.15);
+  color: #981e32;
+  text-decoration: none;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+div.column a:hover {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-color: transparent;
+  box-shadow: inset 0 -5px 0 transparent;
+  background-color: rgba(239, 120, 121, 0.3);
+  color: #c60c30;
+  text-shadow: 1px 1px 1px rgba(152, 30, 50, 0.3);
+}
+div.column a.subtle-link {
+  border-bottom: 1px solid rgba(152, 30, 50, 0);
+  box-shadow: inset 0 -5px 0 rgba(152, 30, 50, 0);
+}
+div.column a.pop-out-link {
+  -webkit-transition: color .4s linear, background .4s ease-in, font-size .25s linear;
+  -moz-transition: color .4s linear, background .4s ease-in, font-size .25s linear;
+  transition: color .4s linear, background .4s ease-in, font-size .25s linear;
+}
+div.column a.pop-out-link.subtle-link {
+  border-bottom: 1px solid rgba(152, 30, 50, 0);
+  box-shadow: inset 0 -5px 0 rgba(152, 30, 50, 0);
+}
+div.column a.pop-out-link:hover {
+  background-color: rgba(211, 130, 53, 0.1);
+  font-size: 1.05em;
+  line-height: calc(1.05em * 1.05);
+  color: #f6861f;
+}
+div.column a.dark-red-button {
+  display: block;
+  color: #fff;
+  background-color: #981e32;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.3333s linear;
+  padding: .5em 1em;
+}
+div.column a.dark-red-button:hover {
+  background-color: #c60c30;
+}
+div.column a img {
+  border: 1px solid rgba(94, 106, 113, 0.5);
+  box-shadow: 2px 2px 2px rgba(94, 106, 113, 0.25);
+  text-decoration: none;
+  -webkit-transition: border .4s linear, box-shadow .4s ease-in;
+  -moz-transition: border .4s linear, box-shadow .4s ease-in;
+  transition: border .4s linear, box-shadow .4s ease-in;
+}
+div.column a img:hover {
+  border: 1px solid #981e32;
+  box-shadow: 2px 2px 2px rgba(152, 30, 50, 0.3333);
+}
+div.column a[data-title] {
+  position: relative;
+}
+div.column a[data-title]:hover:after {
+  content: attr(data-title);
+  position: absolute;
+  left: 5px;
+  top: 100%;
+  width: 220px;
+  border: 1px solid #925b29;
+  padding: 4px 8px;
+  background: #eddccc;
+  background: -webkit-linear-gradient(top, #eddccc, #fff);
+  background: -moz-linear-gradient(top, #eddccc, #fff);
+  background: -o-linear-gradient(top, #eddccc, #fff);
+  background: linear-gradient(top, #eddccc, #fff);
+  color: #464e54;
+  z-index: 20;
+}
+div.column:hover a.loud-link {
+  border-bottom: 1px solid rgba(198, 12, 48, 0.2);
+  box-shadow: inset 0 -5px 0 rgba(198, 12, 48, 0.2);
+}
+div.column h1 > a,
+div.column h2 > a,
+div.column h3 > a,
+div.column h4 > a,
+.gform_heading h3.gform_title > a {
+  line-height: 1.35em;
 }
 a.vpue-tooltip {
   position: relative;
@@ -3277,7 +3265,7 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
   transition: all 0.3s ease;
 }
 .drop-down-toggle:hover {
-  background-color: rgba(198, 12, 48, 0.3);
+  background-color: rgba(219, 120, 121, 0.3);
 }
 .drop-down-toggle:hover:after {
   border-top: none;
@@ -3289,7 +3277,7 @@ div.column ul.gform_fields.top_label > li.gfield + li.gfield {
   opacity: 0.5;
 }
 .drop-down-toggle.activated {
-  background-color: rgba(198, 12, 48, 0.15);
+  background-color: rgba(219, 120, 121, 0.15);
 }
 .drop-down-toggle.activated:after {
   border-top: 8px solid #981e32;
@@ -4029,4 +4017,88 @@ div.column ul:not(.content-boxes):not(.application-steps).gray-bullets li {
 }
 div.column section.header-newsEvents {
   background: url(/wp-content/uploads/sites/53/2016/05/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/53/2016/05/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/53/2016/05/wpbg-news-events-v2.png) no-repeat center;
+}
+div.column ul.residence-hall-courses {
+  padding-right: 0;
+  padding-left: 0;
+}
+div.column ul.residence-hall-courses > li {
+  float: left;
+  width: 49%;
+  border: 1px solid #d9d9d9;
+  border-radius: 7px;
+  margin-bottom: 2%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  list-style-type: none;
+}
+div.column ul.residence-hall-courses > li > div.title {
+  position: relative;
+  height: 211px;
+}
+div.column ul.residence-hall-courses > li > div.title > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+div.column ul.residence-hall-courses > li > div.title.community {
+  background: #615647 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_community.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.gannon-goldsworthy {
+  background: #6e6365 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_gannon-goldsworthy.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.global {
+  background: #646878 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_global-scholar.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.honors {
+  background: #c69f86 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_honors.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.mceachern {
+  background: #916251 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_mceachern.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.mcroskey {
+  background: #83806c url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_mcroskey.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.northside {
+  background: #b1aec2 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_northside.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.olympia {
+  background: #566d84 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_olympia.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.orton {
+  background: #c5bbb2 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_orton.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.regents {
+  background: #625958 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_regents.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.rogers {
+  background: #413831 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_rogers-02.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.scott-coman {
+  background: #d7d0c1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_scott-coman.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.stimson {
+  background: #88796b url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stimson.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.stephenson {
+  background: #a26e58 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stephenson.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.stevens {
+  background: #5c6979 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stevens.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.streit-perham {
+  background: #acb1b1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stevens.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > div.title.wilmer-davis {
+  background: #75779a url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_wilmer-davis.jpg) no-repeat scroll center center;
+}
+div.column ul.residence-hall-courses > li > p.hidden-info {
+  display: none;
 }

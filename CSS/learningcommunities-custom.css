@@ -4025,6 +4025,7 @@ div.column ul.residence-hall-courses {
 div.column ul.residence-hall-courses > li {
   float: left;
   width: 49%;
+  padding: 0;
   border: 1px solid #d9d9d9;
   border-radius: 7px;
   margin-bottom: 2%;

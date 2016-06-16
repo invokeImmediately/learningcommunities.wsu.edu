@@ -41,12 +41,16 @@
 					
 					// Before changing anything, compute and store the current CSS style rules we will change
 					var leftPosCmptd = $this.css("left");
-					var widthCmptd = $this.css("width");
-					var prntWidthCmptd = $this.parent().css("width");
 					var leftStyleSttng = (100 * parseFloat(leftPosCmptd) / parseFloat(prntWidthCmptd));
 					$this.data("prev-left-setting", leftStyleSttng + "%");
+
+					var widthCmptd = $this.css("width");
+					var prntWidthCmptd = $this.parent().css("width");
 					var widthStyleSttng = (100 * parseFloat(widthCmptd) / parseFloat(prntWidthCmptd));
 					$this.data("prev-width-setting", widthStyleSttng + "%");
+					
+					var zIndexStyleSttng = $this.css("z-index");
+					alert(zIndexStyleSttng);
 					
 					// Animate the widening of the box and revelation of previously hidden course info
 					$this.animate({

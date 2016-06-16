@@ -4056,7 +4056,9 @@ div.column ul.residence-hall-courses > li > div.title > p {
 div.column ul.residence-hall-courses > li > p.hidden-info {
   display: none;
   background: #fff;
+  padding-right: 7px;
   padding-bottom: 1em;
+  padding-left: 7px;
 }
 div.column ul.residence-hall-courses > li > p.hidden-info:last-child {
   border-bottom-left-radius: 7px;

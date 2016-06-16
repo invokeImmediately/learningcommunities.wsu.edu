@@ -65,7 +65,13 @@
 					}, 333, function() {
 						var $hiddenInfo = $(this).find(slctrHiddenInfo);
 						$hiddenInfo.stop().show(333, function() {
-							$(this).parents(slctrPrntList).masonry("layout");
+							var $parent = $(this).parents(slctrPrntList);
+							$parent.masonry("once", "layoutComplete", function() {
+								$("html, body").animate({
+									scrollTop: $this.offset().top
+								}, 333);
+							});
+							$parent.masonry("layout");
 						});
 					});
 				} // If the panel is already active, do nothing.

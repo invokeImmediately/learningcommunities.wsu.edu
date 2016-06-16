@@ -4054,10 +4054,14 @@ div.column ul.residence-hall-courses > li > div.title > p {
 div.column ul.residence-hall-courses > li > p.hidden-info {
   display: none;
   background: #fff;
+  padding-bottom: 1em;
 }
 div.column ul.residence-hall-courses > li > p.hidden-info:last-child {
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
+}
+div.column ul.residence-hall-courses > li > div.title:first-child + p.hiden-info {
+  padding-top: 1em;
 }
 div.column ul.residence-hall-courses > li.community {
   background: #615647 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_community.jpg) no-repeat scroll center center;

@@ -43,22 +43,19 @@
 					var leftPosCmptd = $this.css("left");
 					var widthCmptd = $this.css("width");
 					var prntWidthCmptd = $this.parent().css("width");
-					var zIndexStyleSetting = $this.css("z-index");
 					var leftStyleSttng = (100 * parseFloat(leftPosCmptd) / parseFloat(prntWidthCmptd));
 					$this.data("prev-left-setting", leftStyleSttng + "%");
 					var widthStyleSttng = (100 * parseFloat(widthCmptd) / parseFloat(prntWidthCmptd));
 					$this.data("prev-width-setting", widthStyleSttng + "%");
-					var widthStyleSttng = (100 * parseFloat(widthCmptd) / parseFloat(prntWidthCmptd));
-					$this.data("prev-width-setting", widthStyleSttng + "%");
 					
 					// Animate the widening of the box and revelation of previously hidden course info
-					var $hiddenInfo = $this.find(slctrHiddenInfo);
 					$this.animate({
 						"width" : "100%",
 						"left" : "0%"
-					}, 333, (function($objsToShow) {
-						$objsToShow.stop().show(333);
-					})($hiddenInfo));
+					}, 333, function() {
+						var $hiddenInfo = $(this).find(slctrHiddenInfo);
+						$hiddenInfo.stop().show(333);
+					});
 				} // If the panel is already active, do nothing.
 			}).mouseleave(function () {
 				var $this = $(this);

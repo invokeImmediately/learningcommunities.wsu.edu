@@ -64,7 +64,9 @@
 						"left" : "0%"
 					}, 333, function() {
 						var $hiddenInfo = $(this).find(slctrHiddenInfo);
-						$hiddenInfo.stop().show(333);
+						$hiddenInfo.stop().show(333, function() {
+							$(this).parents(slctrPrntList).masonry("layout");
+						});
 					});
 				} // If the panel is already active, do nothing.
 			}).mouseleave(function () {
@@ -89,6 +91,7 @@
 						var $this = $(this);
 						var zIndexStyleSttng = $this.data("prev-z-index-setting");					
 						$this.css("z-index", zIndexStyleSttng);
+						$this.parents(slctrPrntList).masonry("layout");
 					});
 				}
 			});

@@ -24,10 +24,10 @@
 				break;
 		}
 		
-		InitResHallCourseInfoPanels("ul.residence-hall-courses", "li.course-info-panel", ".hidden-info");
+		InitResHallCourseInfoPanels("ul.residence-hall-courses", "li.course-info-panel", "div.title", ".hidden-info");
 	});
 	
-	function InitResHallCourseInfoPanels(slctrPrntList, slctrChldPanels, slctrHiddenInfo) {
+	function InitResHallCourseInfoPanels(slctrPrntList, slctrChldPanels, slctrTitleArea, slctrHiddenInfo) {
 		var $courseLists = $(slctrPrntList);
 		$courseLists.each(function () {
 			var $infoPanels = $(this).find(slctrChldPanels);
@@ -74,9 +74,12 @@
 							$parent.masonry("layout");
 						});
 					});
-				} // If the panel is already active, do nothing.
-			}).mouseleave(function () {
-				var $this = $(this);
+				}
+			});
+			
+			var $titleAreas = $infoPanels.find(slctrTitleAreas);
+			$titleAreas.click(function () {
+				var $this = $(this).parents(slctrChldPanels).first();
 				
 				// We only need to do something if the mouse has left the click-trigggered active panel
 				var isActive = $this.data("is-active");

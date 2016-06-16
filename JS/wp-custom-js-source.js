@@ -81,7 +81,8 @@
 				
 				// We only need to do something if the mouse has left the click-trigggered active panel
 				var isActive = $this.data("is-active");
-				if (isActive) {				
+				if (isActive) {
+					alert("Collapsing.");
 					// Retreive previous CSS style rules
 					var leftStyleSttng = $this.data("prev-left-setting");
 					var widthStyleSttng = $this.data("prev-width-setting");

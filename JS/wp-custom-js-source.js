@@ -24,7 +24,7 @@
                 break;
         }
         
-        InitResHallCourseInfoPanels("ul.residence-hall-courses", ".course-info-panel", ".hidden-info");
+        InitResHallCourseInfoPanels("ul.residence-hall-courses", "li.course-info-panel", ".hidden-info");
 	});
     
     function InitResHallCourseInfoPanels(slctrPrntList, slctrChldPanels, slctrHiddenInfo) {
@@ -47,7 +47,7 @@
 				$this.data("prev-width-setting", widthStyleSttng + "%");
 				
 				// Animate the widening of the box and revelation of previously hidden course info
-				var $hiddenInfo = $this.find(slctrHiddenInfo).first();
+				var $hiddenInfo = $this.find(slctrHiddenInfo);
 				$this.animate({
 					"width" : "100%",
 					"left" : "0%"
@@ -66,6 +66,7 @@
 					var widthStyleSttng = $this.data("prev-width-setting");
 					
 					// Animate the restoration of the original layout of the panel
+					var $hiddenInfo = $this.find(slctrHiddenInfo);
 					$hiddenInfo.stop().hide(200);
 					$this.animate({
 						"width" : widthStyleSttng,

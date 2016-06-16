@@ -41,18 +41,24 @@
 					
 					// Before changing anything, compute and store the current CSS style rules we will change
 					var leftPosCmptd = $this.css("left");
+					var prntWidthCmptd = $this.parent().css("width");
 					var leftStyleSttng = (100 * parseFloat(leftPosCmptd) / parseFloat(prntWidthCmptd));
 					$this.data("prev-left-setting", leftStyleSttng + "%");
 
 					var widthCmptd = $this.css("width");
-					var prntWidthCmptd = $this.parent().css("width");
 					var widthStyleSttng = (100 * parseFloat(widthCmptd) / parseFloat(prntWidthCmptd));
 					$this.data("prev-width-setting", widthStyleSttng + "%");
 					
 					var zIndexStyleSttng = $this.css("z-index");
-					alert(zIndexStyleSttng);
+					$this.data("prev-z-index-setting", zIndexStyleSttng);
 					
 					// Animate the widening of the box and revelation of previously hidden course info
+					if(zIndexStyleSttng == "auto") {
+						$this.css("z-index", 10);
+					}
+					else {
+						$this.css("z-index", parseInt(zIndexStyleSttng) + 1);
+					}
 					$this.animate({
 						"width" : "100%",
 						"left" : "0%"
@@ -72,6 +78,7 @@
 					// Retreive previous CSS style rules
 					var leftStyleSttng = $this.data("prev-left-setting");
 					var widthStyleSttng = $this.data("prev-width-setting");
+					var zIndexStyleSttng = $this.data("prev-z-index-setting");					
 					
 					// Animate the restoration of the original layout of the panel
 					var $hiddenInfo = $this.find(slctrHiddenInfo);
@@ -80,6 +87,7 @@
 						"width" : widthStyleSttng,
 						"left" : leftStyleSttng
 					}, 333);
+					$this.css("z-index", zIndexStyleSttng);
 				}
 			});
 		});

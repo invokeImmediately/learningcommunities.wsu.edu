@@ -35,7 +35,7 @@
 				var $this = $(this);
 				var isActive = $this.data("is-active");
 				
-				if(isActive == undefined || isActive == 0) {
+				if(isActive == undefined || isActive == "0") {
 					// Before changing anything, compute and store the current CSS style rules we will change
 					var leftPosCmptd = $this.css("left");
 					var prntWidthCmptd = $this.parent().css("width");
@@ -81,7 +81,7 @@
 				
 				// We only need to do something if the mouse has left the click-trigggered active panel
 				var isActive = $this.data("is-active");
-				if (isActive) {
+				if (isActive == "1") {
 					alert("Collapsing.");
 					// Retreive previous CSS style rules
 					var leftStyleSttng = $this.data("prev-left-setting");

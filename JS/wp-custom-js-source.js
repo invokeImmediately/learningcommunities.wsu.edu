@@ -27,7 +27,7 @@
 		InitResHallCourseInfoPanels("ul.residence-hall-courses", "li.course-info-panel", "div.title", ".hidden-info");
 	});
 	
-	function InitResHallCourseInfoPanels(slctrPrntList, slctrChldPanels, slctrTitleArea, slctrHiddenInfo) {
+	function InitResHallCourseInfoPanels(slctrPrntList, slctrChldPanels, slctrTitleAreas, slctrHiddenInfo) {
 		var $courseLists = $(slctrPrntList);
 		$courseLists.each(function () {
 			var $infoPanels = $(this).find(slctrChldPanels);

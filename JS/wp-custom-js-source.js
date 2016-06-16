@@ -54,8 +54,7 @@
 						$this.css("z-index", 10);
 					}
 					else {
-						alert("Uh oh!");
-						$this.css("z-index", parseInt(zIndexStyleSttng) + 1);
+						$this.css("z-index", parseInt(zIndexStyleSttng) + 10);
 					}
 					$this.animate({
 						"width" : "100%",

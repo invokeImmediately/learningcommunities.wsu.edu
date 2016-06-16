@@ -78,7 +78,6 @@
 					// Retreive previous CSS style rules
 					var leftStyleSttng = $this.data("prev-left-setting");
 					var widthStyleSttng = $this.data("prev-width-setting");
-					var zIndexStyleSttng = $this.data("prev-z-index-setting");					
 					
 					// Animate the restoration of the original layout of the panel
 					var $hiddenInfo = $this.find(slctrHiddenInfo);
@@ -86,8 +85,11 @@
 					$this.animate({
 						"width" : widthStyleSttng,
 						"left" : leftStyleSttng
-					}, 333);
-					$this.css("z-index", zIndexStyleSttng);
+					}, 333, function() {
+						var $this = $(this);
+						var zIndexStyleSttng = $this.data("prev-z-index-setting");					
+						$this.css("z-index", zIndexStyleSttng);
+					});
 				}
 			});
 		});

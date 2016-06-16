@@ -102,10 +102,12 @@ div.column ul.residence-hall-courses {
         float: left;
         width: 49%;
 		padding: 0;
-        border: 1px solid #d9d9d9;
+        border: 1px solid @hex-darker-gray;
         border-radius: 7px;
         margin-bottom: 2%;
+		overflow: hidden;
         box-shadow: 1px 1px 1px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.2);
+		background: @hex-white;
         list-style-type: none;
         & > div.title { 
 			position: relative;
@@ -128,65 +130,67 @@ div.column ul.residence-hall-courses {
 		& > p.hidden-info {
 			display: none;
 			background: @hex-white;
+			padding-right: 7px;
 			padding-bottom: @v-btm-mrgns;
+			padding-left: 7px;
 			&:last-child {
 				border-bottom-left-radius: 7px;
 				border-bottom-right-radius: 7px;
 			}
 		}
-		& > div.title:first-child + p.hiden-info {
+		& > div.title:first-child + p.hidden-info {
 			padding-top: @v-btm-mrgns;			
 		}
-		&.community {
-			background: #615647 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_community.jpg) no-repeat scroll center center;
+		&.community > div.title {
+			background: #615647 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_community.jpg) no-repeat scroll center top;
 		}
-		&.gannon-goldsworthy {
-			background: #6e6365 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_gannon-goldsworthy.jpg) no-repeat scroll center center;
+		&.gannon-goldsworthy > div.title  {
+			background: #6e6365 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_gannon-goldsworthy.jpg) no-repeat scroll center top;
 		}
-		&.global {
-			background: #646878 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_global-scholars.jpg) no-repeat scroll center center;
+		&.global > div.title {
+			background: #646878 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_global-scholars.jpg) no-repeat scroll center top;
 		}
-		&.honors {
-			background: #c69f86 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_honors.jpg) no-repeat scroll center center;
+		&.honors > div.title {
+			background: #c69f86 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_honors.jpg) no-repeat scroll center top;
 		}
-		&.mceachern {
-			background: #916251 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_mceachern.jpg) no-repeat scroll center center;
+		&.mceachern > div.title {
+			background: #916251 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_mceachern.jpg) no-repeat scroll center top;
 		}
-		&.mcroskey {
-			background: #83806c url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_mcroskey.jpg) no-repeat scroll center center;
+		&.mcroskey > div.title {
+			background: #83806c url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_mcroskey.jpg) no-repeat scroll center top;
 		}
-		&.northside {
-			background: #b1aec2 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_northside.jpg) no-repeat scroll center center;
+		&.northside > div.title {
+			background: #b1aec2 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_northside.jpg) no-repeat scroll center top;
 		}
-		&.olympia {
-			background: #566d84 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_olympia.jpg) no-repeat scroll center center;
+		&.olympia > div.title {
+			background: #566d84 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_olympia.jpg) no-repeat scroll center top;
 		}
-		&.orton {
-			background: #c5bbb2 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_orton.jpg) no-repeat scroll center center;
+		&.orton > div.title {
+			background: #c5bbb2 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_orton.jpg) no-repeat scroll center top;
 		}
-		&.regents {
-			background: #625958 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_regents.jpg) no-repeat scroll center center;
+		&.regents > div.title {
+			background: #625958 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_regents.jpg) no-repeat scroll center top;
 		}
-		&.rogers {
-			background: #413831 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_rogers-02.jpg) no-repeat scroll center center;
+		&.rogers > div.title {
+			background: #413831 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_rogers-02.jpg) no-repeat scroll center top;
 		}
-		&.scott-coman {
-			background: #d7d0c1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_scott-coman.jpg) no-repeat scroll center center;
+		&.scott-coman > div.title {
+			background: #d7d0c1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_scott-coman.jpg) no-repeat scroll center top;
 		}
-		&.stimson {
-			background: #88796b url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stimson.jpg) no-repeat scroll center center;
+		&.stimson > div.title {
+			background: #88796b url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stimson.jpg) no-repeat scroll center top;
 		}
-		&.stephenson {
-			background: #a26e58 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stephenson.jpg) no-repeat scroll center center;
+		&.stephenson > div.title {
+			background: #a26e58 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stephenson.jpg) no-repeat scroll center top;
 		}
-		&.stevens {
-			background: #5c6979 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stevens.jpg) no-repeat scroll center center;
+		&.stevens > div.title {
+			background: #5c6979 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stevens.jpg) no-repeat scroll center top;
 		}
-		&.streit-perham {
-			background: #acb1b1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stevens.jpg) no-repeat scroll center center;
+		&.streit-perham > div.title > div.title {
+			background: #acb1b1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stevens.jpg) no-repeat scroll center top;
 		}
-		&.wilmer-davis {
-			background: #75779a url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_wilmer-davis.jpg) no-repeat scroll center center;
+		&.wilmer-davis > div.title {
+			background: #75779a url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_wilmer-davis.jpg) no-repeat scroll center top;
 		}
     }
 }

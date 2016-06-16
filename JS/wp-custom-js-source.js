@@ -83,9 +83,7 @@
 				
 				// We only need to do something if the mouse has left the click-trigggered active panel
 				var isActive = $this.data("is-active");
-				if (isActive) {
-					$this.data("is-active", "0");
-					
+				if (isActive) {				
 					// Retreive previous CSS style rules
 					var leftStyleSttng = $this.data("prev-left-setting");
 					var widthStyleSttng = $this.data("prev-width-setting");
@@ -102,6 +100,8 @@
 						$this.css("z-index", zIndexStyleSttng);
 						$this.parents(slctrPrntList).masonry("layout");
 					});
+					
+					$this.data("is-active", "0");
 				}
 			});
 		});

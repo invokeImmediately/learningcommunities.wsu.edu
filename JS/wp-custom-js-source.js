@@ -94,10 +94,10 @@
 						"width" : widthStyleSttng,
 						"left" : leftStyleSttng
 					}, 333, function() {
-						var zIndexStyleSttng = $this.data("prev-z-index-setting");					
-						$this.css("z-index", zIndexStyleSttng);
-						$this.parents(slctrPrntList).masonry("layout");
-						$this.data("is-active", "0");
+						var zIndexStyleSttng = $(this).data("prev-z-index-setting");					
+						$(this).css("z-index", zIndexStyleSttng);
+						$(this).parents(slctrPrntList).masonry("layout");
+						$(this).data("is-active", "0");
 					});					
 				}
 			});

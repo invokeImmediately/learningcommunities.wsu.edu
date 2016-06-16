@@ -4053,6 +4053,7 @@ div.column ul.residence-hall-courses > li {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   background: #fff;
   list-style-type: none;
+  z-index: 0;
 }
 div.column ul.residence-hall-courses > li > div.title {
   position: relative;

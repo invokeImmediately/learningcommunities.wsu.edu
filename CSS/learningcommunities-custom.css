@@ -4037,6 +4037,7 @@ div.column ul.residence-hall-courses > li > div.title {
   position: relative;
   width: 100%;
   height: 211px;
+  border-radius: 7px;
 }
 div.column ul.residence-hall-courses > li > div.title > p {
   position: absolute;

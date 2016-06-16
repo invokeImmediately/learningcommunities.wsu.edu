@@ -43,8 +43,11 @@
 					var leftPosCmptd = $this.css("left");
 					var widthCmptd = $this.css("width");
 					var prntWidthCmptd = $this.parent().css("width");
+					var zIndexStyleSetting = $this.css("z-index");
 					var leftStyleSttng = (100 * parseFloat(leftPosCmptd) / parseFloat(prntWidthCmptd));
 					$this.data("prev-left-setting", leftStyleSttng + "%");
+					var widthStyleSttng = (100 * parseFloat(widthCmptd) / parseFloat(prntWidthCmptd));
+					$this.data("prev-width-setting", widthStyleSttng + "%");
 					var widthStyleSttng = (100 * parseFloat(widthCmptd) / parseFloat(prntWidthCmptd));
 					$this.data("prev-width-setting", widthStyleSttng + "%");
 					

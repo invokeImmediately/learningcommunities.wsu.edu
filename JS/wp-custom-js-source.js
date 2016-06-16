@@ -36,9 +36,6 @@
 				var isActive = $this.data("is-active");
 				
 				if(isActive == undefined || isActive == 0) {
-					// Start by noting this as the active panel
-					$this.data("is-active", "1");
-					
 					// Before changing anything, compute and store the current CSS style rules we will change
 					var leftPosCmptd = $this.css("left");
 					var prntWidthCmptd = $this.parent().css("width");
@@ -72,6 +69,7 @@
 								}, 333);
 							});
 							$parent.masonry("layout");
+							$this.data("is-active", "1");
 						});
 					});
 				}

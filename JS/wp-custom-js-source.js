@@ -67,7 +67,7 @@
 						$hiddenInfo.stop().show(333, function() {
 							var $parent = $(this).parents(slctrPrntList);
 							$parent.masonry("once", "layoutComplete", function() {
-								$("html, body").animate({
+								$("html, body").stop().animate({
 									scrollTop: $this.offset().top
 								}, 333);
 							});
@@ -99,9 +99,8 @@
 						var zIndexStyleSttng = $this.data("prev-z-index-setting");					
 						$this.css("z-index", zIndexStyleSttng);
 						$this.parents(slctrPrntList).masonry("layout");
-					});
-					
-					$this.data("is-active", "0");
+						$this.data("is-active", "0");
+					});					
 				}
 			});
 		});

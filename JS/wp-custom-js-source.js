@@ -34,8 +34,17 @@
 			$infoPanels.click(function () {
 				var $this = $(this);
 				var isActive = $this.data("is-active");
+				if (isActive == undefined) {
+					isActive = "false";
+				}
+				var isWorking = $this.data("is-working");
+				if (isWorking == undefined) {
+					isWorking = "false";
+				}
 				
-				if(isActive == undefined || isActive == "0") {
+				if(isWorking == "false" && isActive == "false") {
+					$this.data("is-working", "true");
+					
 					// Before changing anything, compute and store the current CSS style rules we will change
 					var leftPosCmptd = $this.css("left");
 					var prntWidthCmptd = $this.parent().css("width");
@@ -69,7 +78,8 @@
 								}, 333);
 							});
 							$parent.masonry("layout");
-							$this.data("is-active", "1");
+							$this.data("is-active", "true");
+							$this.data("is-working", "false");
 						});
 					});
 				}
@@ -81,8 +91,17 @@
 				
 				// We only need to do something if the mouse has left the click-trigggered active panel
 				var isActive = $this.data("is-active");
-				if (isActive == "1") {
-					alert("Collapsing.");
+				if (isActive == undefined) {
+					isActive = "false";
+				}
+				var isWorking = $this.data("is-working");
+				if (isWorking == undefined) {
+					isWorking = "false";
+				}
+				
+				if (isWorking = "false" && isActive == "true") {
+					$this.data("is-working", "true");
+					
 					// Retreive previous CSS style rules
 					var leftStyleSttng = $this.data("prev-left-setting");
 					var widthStyleSttng = $this.data("prev-width-setting");
@@ -94,10 +113,11 @@
 						"width" : widthStyleSttng,
 						"left" : leftStyleSttng
 					}, 333, function() {
-						var zIndexStyleSttng = $(this).data("prev-z-index-setting");					
-						$(this).css("z-index", zIndexStyleSttng);
-						$(this).parents(slctrPrntList).masonry("layout");
-						$(this).data("is-active", "0");
+						var zIndexStyleSttng = $this.data("prev-z-index-setting");					
+						$this.css("z-index", zIndexStyleSttng);
+						$this.parents(slctrPrntList).masonry("layout");
+						$this.data("is-active", "false");
+						$this.data("is-working", "false");
 					});					
 				}
 			});

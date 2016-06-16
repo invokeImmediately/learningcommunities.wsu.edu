@@ -1,7 +1,27 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700);
 .has-mono-font {
-  font-family: 'Roboto Mono', 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
+  font-family: 'Roboto Mono', monospace, sans-serif;
   font-weight: 300;
+}
+.has-dflt-font,
+body,
+div.column h1,
+div.column h2,
+div.column h3,
+div.column h4,
+div.column,
+header.main-header,
+div.column,
+.gform_heading h3.gform_title {
+  font-family: 'Open Sans', sans-serif;
+}
+.has-alt-font,
+div.column p.article-tagline.sans,
+span.accentuated-text {
+  font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
+}
+.has-subst-font {
+  font-family: 'Roboto Condensed', 'Open Sans', sans-serif;
 }
 .initially-hidden {
   display: none;
@@ -4063,6 +4083,10 @@ div.column ul.residence-hall-courses > li > p.hidden-info {
 div.column ul.residence-hall-courses > li > p.hidden-info:last-child {
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
+}
+div.column ul.residence-hall-courses > li > p.hidden-info span.course-details {
+  font-family: 'Roboto Condensed', 'Open Sans', sans-serif;
+  font-size: 1.25em;
 }
 div.column ul.residence-hall-courses > li > div.title:first-child + p.hidden-info {
   padding-top: 1em;

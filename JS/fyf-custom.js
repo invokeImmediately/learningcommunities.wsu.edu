@@ -24,20 +24,26 @@
 				break;
 		}
 		
-		InitResHallCourseInfoPanels("ul.residence-hall-courses", "li.course-info-panel", ".hidden-info");
+		InitResHallCourseInfoPanels("ul.residence-hall-courses", "li.course-info-panel", "div.title", ".hidden-info");
 	});
 	
-	function InitResHallCourseInfoPanels(slctrPrntList, slctrChldPanels, slctrHiddenInfo) {
+	function InitResHallCourseInfoPanels(slctrPrntList, slctrChldPanels, slctrTitleAreas, slctrHiddenInfo) {
 		var $courseLists = $(slctrPrntList);
 		$courseLists.each(function () {
 			var $infoPanels = $(this).find(slctrChldPanels);
 			$infoPanels.click(function () {
 				var $this = $(this);
 				var isActive = $this.data("is-active");
+				if (isActive == undefined) {
+					isActive = "false";
+				}
+				var isWorking = $this.data("is-working");
+				if (isWorking == undefined) {
+					isWorking = "false";
+				}
 				
-				if(isActive == undefined || isActive == 0) {
-					// Start by noting this as the active panel
-					$this.data("is-active", "1");
+				if(isWorking == "false" && isActive == "false") {
+					$this.data("is-working", "true");
 					
 					// Before changing anything, compute and store the current CSS style rules we will change
 					var leftPosCmptd = $this.css("left");
@@ -57,7 +63,7 @@
 						$this.css("z-index", 10);
 					}
 					else {
-						$this.css("z-index", parseInt(zIndexStyleSttng) + 1);
+						$this.css("z-index", parseInt(zIndexStyleSttng) + 10);
 					}
 					$this.animate({
 						"width" : "100%",
@@ -65,17 +71,36 @@
 					}, 333, function() {
 						var $hiddenInfo = $(this).find(slctrHiddenInfo);
 						$hiddenInfo.stop().show(333, function() {
-							$(this).parents(slctrPrntList).masonry("layout");
+							var $parent = $(this).parents(slctrPrntList);
+							$parent.masonry("once", "layoutComplete", function() {
+								$("html, body").stop().animate({
+									scrollTop: $this.offset().top
+								}, 333);
+							});
+							$parent.masonry("layout");
+							$this.data("is-active", "true");
+							$this.data("is-working", "false");
 						});
 					});
-				} // If the panel is already active, do nothing.
-			}).mouseleave(function () {
-				var $this = $(this);
+				}
+			});
+			
+			var $titleAreas = $infoPanels.find(slctrTitleAreas);
+			$titleAreas.click(function () {
+				var $this = $(this).parents(slctrChldPanels).first();
 				
 				// We only need to do something if the mouse has left the click-trigggered active panel
 				var isActive = $this.data("is-active");
-				if (isActive) {
-					$this.data("is-active", "0");
+				if (isActive == undefined) {
+					isActive = "false";
+				}
+				var isWorking = $this.data("is-working");
+				if (isWorking == undefined) {
+					isWorking = "false";
+				}
+				
+				if (isWorking = "false" && isActive == "true") {
+					$this.data("is-working", "true");
 					
 					// Retreive previous CSS style rules
 					var leftStyleSttng = $this.data("prev-left-setting");
@@ -88,11 +113,12 @@
 						"width" : widthStyleSttng,
 						"left" : leftStyleSttng
 					}, 333, function() {
-						var $this = $(this);
 						var zIndexStyleSttng = $this.data("prev-z-index-setting");					
 						$this.css("z-index", zIndexStyleSttng);
 						$this.parents(slctrPrntList).masonry("layout");
-					});
+						$this.data("is-active", "false");
+						$this.data("is-working", "false");
+					});					
 				}
 			});
 		});

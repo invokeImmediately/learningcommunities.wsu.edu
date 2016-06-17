@@ -135,23 +135,6 @@ img shift-to-center {
 .centers-text {
   text-align: center;
 }
-.has-dflt-font,
-body,
-div.column h1,
-div.column h2,
-div.column h3,
-div.column h4,
-div.column,
-header.main-header,
-div.column,
-.gform_heading h3.gform_title {
-  font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Grande';
-}
-.has-alt-font,
-div.column p.article-tagline.sans,
-span.accentuated-text {
-  font-family: 'Open Sans Condensed', 'Geneva', 'Verdana', 'Open Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', sans-serif;
-}
 .soft-gray-border {
   border: 1px solid rgba(42, 48, 51, 0.5);
 }
@@ -450,7 +433,7 @@ section.article-header div.header-content {
     text-shadow: 0 0.3333px 0 #77898b, 0 0.6667px 0 #687779, 0 1px 0 #576365, 0 1.3333px 0 #475153, 0 1.6667px 0 #363e3f, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
   }
 }
-section.halves div.column p {
+section.halves div.column p:not([class*="center"]) {
   text-align: left;
 }
 @media (min-width: 1050px) {
@@ -2518,6 +2501,10 @@ strong.opening-line {
   color: #72652a;
   text-shadow: 1px 1px 1px rgba(57, 50, 21, 0.3333);
 }
+strong.stands-out {
+  font-family: 'Roboto Condensed', 'Open Sans', sans-serif;
+  font-size: 1.25em;
+}
 mark.highlight {
   background-color: transparent;
   font-style: normal;
@@ -4095,51 +4082,102 @@ div.column ul.residence-hall-courses > li > div.title:first-child + p.hidden-inf
 div.column ul.residence-hall-courses > li.community > div.title {
   background: #615647 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_community.jpg) no-repeat scroll center top;
 }
+div.column ul.residence-hall-courses > li.community > p.hidden-info span.course-details {
+  color: #615647;
+}
 div.column ul.residence-hall-courses > li.gannon-goldsworthy > div.title {
   background: #6e6365 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_gannon-goldsworthy.jpg) no-repeat scroll center top;
+}
+div.column ul.residence-hall-courses > li.gannon-goldsworthy > p.hidden-info span.course-details {
+  color: #6e6365;
 }
 div.column ul.residence-hall-courses > li.global > div.title {
   background: #646878 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_global-scholars.jpg) no-repeat scroll center top;
 }
+div.column ul.residence-hall-courses > li.global > p.hidden-info span.course-details {
+  color: #646878;
+}
 div.column ul.residence-hall-courses > li.honors > div.title {
   background: #c69f86 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_honors.jpg) no-repeat scroll center top;
 }
-div.column ul.residence-hall-courses > li.mceachern > div.title {
-  background: #916251 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_mceachern.jpg) no-repeat scroll center top;
+div.column ul.residence-hall-courses > li.honors > p.hidden-info span.course-details {
+  color: #4b3c32;
 }
 div.column ul.residence-hall-courses > li.mcroskey > div.title {
   background: #83806c url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_mcroskey.jpg) no-repeat scroll center top;
 }
+div.column ul.residence-hall-courses > li.mcroskey > p.hidden-info span.course-details {
+  color: #83806c;
+}
+div.column ul.residence-hall-courses > li.mceachern > div.title {
+  background: #916251 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_mceachern.jpg) no-repeat scroll center top;
+}
+div.column ul.residence-hall-courses > li.mceachern > p.hidden-info span.course-details {
+  color: #916251;
+}
 div.column ul.residence-hall-courses > li.northside > div.title {
   background: #b1aec2 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_northside.jpg) no-repeat scroll center top;
+}
+div.column ul.residence-hall-courses > li.northside > p.hidden-info span.course-details {
+  color: #434249;
 }
 div.column ul.residence-hall-courses > li.olympia > div.title {
   background: #566d84 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_olympia.jpg) no-repeat scroll center top;
 }
+div.column ul.residence-hall-courses > li.olympia > p.hidden-info span.course-details {
+  color: #566d84;
+}
 div.column ul.residence-hall-courses > li.orton > div.title {
   background: #c5bbb2 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_orton.jpg) no-repeat scroll center top;
+}
+div.column ul.residence-hall-courses > li.orton > p.hidden-info span.course-details {
+  color: #4a4643;
 }
 div.column ul.residence-hall-courses > li.regents > div.title {
   background: #625958 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_regents.jpg) no-repeat scroll center top;
 }
+div.column ul.residence-hall-courses > li.regents > p.hidden-info span.course-details {
+  color: #625958;
+}
 div.column ul.residence-hall-courses > li.rogers > div.title {
   background: #413831 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_rogers-02.jpg) no-repeat scroll center top;
+}
+div.column ul.residence-hall-courses > li.rogers > p.hidden-info span.course-details {
+  color: #413831;
 }
 div.column ul.residence-hall-courses > li.scott-coman > div.title {
   background: #d7d0c1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_scott-coman.jpg) no-repeat scroll center top;
 }
+div.column ul.residence-hall-courses > li.scott-coman > p.hidden-info span.course-details {
+  color: #514e49;
+}
 div.column ul.residence-hall-courses > li.stimson > div.title {
   background: #88796b url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stimson.jpg) no-repeat scroll center top;
+}
+div.column ul.residence-hall-courses > li.stimson > p.hidden-info span.course-details {
+  color: #88796b;
 }
 div.column ul.residence-hall-courses > li.stephenson > div.title {
   background: #a26e58 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stephenson.jpg) no-repeat scroll center top;
 }
+div.column ul.residence-hall-courses > li.stephenson > p.hidden-info span.course-details {
+  color: #3d2921;
+}
 div.column ul.residence-hall-courses > li.stevens > div.title {
   background: #5c6979 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stevens.jpg) no-repeat scroll center top;
+}
+div.column ul.residence-hall-courses > li.stevens > p.hidden-info span.course-details {
+  color: #5c6979;
 }
 div.column ul.residence-hall-courses > li.streit-perham > div.title {
   background: #acb1b1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_streit-perham.jpg) no-repeat scroll center top;
 }
+div.column ul.residence-hall-courses > li.streit-perham > p.hidden-info span.course-details {
+  color: #414343;
+}
 div.column ul.residence-hall-courses > li.wilmer-davis > div.title {
   background: #75779a url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_wilmer-davis.jpg) no-repeat scroll center top;
+}
+div.column ul.residence-hall-courses > li.wilmer-davis > p.hidden-info span.course-details {
+  color: #75779a;
 }

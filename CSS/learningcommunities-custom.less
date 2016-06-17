@@ -109,6 +109,7 @@ div.column ul.residence-hall-courses {
         box-shadow: 1px 1px 1px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.2);
 		background: @hex-white;
         list-style-type: none;
+		z-index: 0;
         & > div.title { 
 			position: relative;
 			width: 100%;
@@ -139,7 +140,7 @@ div.column ul.residence-hall-courses {
 			}
 			span.course-details {
 				.has-subst-font;
-				font-size: 1.25em;
+				font-size: 1.15em;
 			}
 		}
 		& > div.title:first-child + p.hidden-info {
@@ -190,8 +191,8 @@ div.column ul.residence-hall-courses {
 		&.stevens > div.title {
 			background: #5c6979 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stevens.jpg) no-repeat scroll center top;
 		}
-		&.streit-perham > div.title > div.title {
-			background: #acb1b1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stevens.jpg) no-repeat scroll center top;
+		&.streit-perham > div.title {
+			background: #acb1b1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_streit-perham.jpg) no-repeat scroll center top;
 		}
 		&.wilmer-davis > div.title {
 			background: #75779a url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_wilmer-davis.jpg) no-repeat scroll center top;

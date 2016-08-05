@@ -1,18 +1,18 @@
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 
 body {
-    @media all and (max-width: @v-wdscrn-bckgrnd) {
-        background: @hex-crimson;
-    }
-    @media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
-        background: @hex-crimson  url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wuxga.jpg) repeat-y fixed right top;
-    }
-    @media all and (min-width: (@v-wuxga-width+1)) and (max-width: @v-wqxga-width) {
-        background: @hex-crimson url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wqxga.jpg) repeat-y fixed right top;
-    }
-    @media all and (min-width: (@v-wqxga-width+1)) {
-        background: @hex-crimson url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wqxga.jpg) repeat-y fixed 1800px top;
-    }
+	@media all and (max-width: @v-wdscrn-bckgrnd) {
+		background: @hex-crimson;
+	}
+	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
+		background: @hex-crimson  url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wuxga.jpg) repeat-y fixed right top;
+	}
+	@media all and (min-width: (@v-wuxga-width+1)) and (max-width: @v-wqxga-width) {
+		background: @hex-crimson url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wqxga.jpg) repeat-y fixed right top;
+	}
+	@media all and (min-width: (@v-wqxga-width+1)) {
+		background: @hex-crimson url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wqxga.jpg) repeat-y fixed 1800px top;
+	}
 }
 
 main {
@@ -20,10 +20,10 @@ main {
 }
 
 #binder {
-    @media all and (min-width: (@v-wdscrn-bckgrnd + 1)) {
-        border-right: 1px solid rgba(red(@hex-darker-gray), blue(@hex-darker-gray), green(@hex-darker-gray),0.5);
-        box-shadow: 5px 0 5px rgba(red(@hex-darkest-gray), blue(@hex-darkest-gray), green(@hex-darkest-gray),0.5);
-    }
+	@media all and (min-width: (@v-wdscrn-bckgrnd + 1)) {
+		border-right: 1px solid rgba(red(@hex-darker-gray), blue(@hex-darker-gray), green(@hex-darker-gray),0.5);
+		box-shadow: 5px 0 5px rgba(red(@hex-darkest-gray), blue(@hex-darkest-gray), green(@hex-darkest-gray),0.5);
+	}
 }
 
 #jacket {
@@ -33,12 +33,12 @@ main {
 }
 
 header.main-header {
-    &:extend(.has-dflt-font);
+	&:extend(.has-dflt-font);
 	background: @hex-darker-gray url(/wp-content/uploads/sites/53/2016/05/background_page-header.jpg) no-repeat scroll center center;
 	color: #fff !important;
-//    @media all and (min-width: (@v-wdscrn-bckgrnd + 1)) {
-//        border-right: 1px solid rgba(red(@hex-darker-gray), blue(@hex-darker-gray), green(@hex-darker-gray),0.5);
-//    }
+//	@media all and (min-width: (@v-wdscrn-bckgrnd + 1)) {
+//		border-right: 1px solid rgba(red(@hex-darker-gray), blue(@hex-darker-gray), green(@hex-darker-gray),0.5);
+//	}
 }
 
 .main-header sub:not(.unset), .main-header sup:not(.unset) {
@@ -55,17 +55,17 @@ header.main-header {
 div.column {
 	aside {
 		font-size: .8rem;
-        &+aside {
-            margin-top: @v-dflt-spcng;
-        }
+		&+aside {
+			margin-top: @v-dflt-spcng;
+		}
 		p, ul {
 			font-size: inherit;
-            &:not(:last-child) {
-                margin-bottom: 0.8rem;
-            }
-            &:last-child:not(.no-bottom-pad) {
-                padding-bottom: 0;
-            }
+			&:not(:last-child) {
+				margin-bottom: 0.8rem;
+			}
+			&:last-child:not(.no-bottom-pad) {
+				padding-bottom: 0;
+			}
 		}
 	}
 }
@@ -77,11 +77,11 @@ div.column {
  *  ║  ╘═» Customized here for use on the SURCA website.                                           ║
  *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
  */
-div.column ul:not(.residence-hall-courses) {
-    li { list-style-image: url(/wp-content/uploads/sites/53/2016/05/ico-cougar-bullet-point.png); }
-    &.gray-bullets {
-        li { list-style-image: url(/wp-content/uploads/sites/53/2016/05/ico-cougar-bullet-point_gray.png); }
-    }
+div.column ul:not(.residence-hall-courses):not(.fyf-instructors) {
+	li { list-style-image: url(/wp-content/uploads/sites/53/2016/05/ico-cougar-bullet-point.png); }
+	&.gray-bullets {
+		li { list-style-image: url(/wp-content/uploads/sites/53/2016/05/ico-cougar-bullet-point_gray.png); }
+	}
 }
 
 div.column {
@@ -89,28 +89,30 @@ div.column {
 	section {
 		&.header-newsEvents {
 			background: url(/wp-content/uploads/sites/53/2016/05/section-bar.png) no-repeat left top,
-                url(/wp-content/uploads/sites/53/2016/05/section-bar.png) no-repeat right top,
-                url(/wp-content/uploads/sites/53/2016/05/wpbg-news-events-v2.png) no-repeat center;
+				url(/wp-content/uploads/sites/53/2016/05/section-bar.png) no-repeat right top,
+				url(/wp-content/uploads/sites/53/2016/05/wpbg-news-events-v2.png) no-repeat center;
 		}
 	}
 }
 
+@drkn-clr: #909090; /* For multiplying the lighter colors in course details; see below. */
+
 div.column ul.residence-hall-courses {
-    padding-right: 0;
-     padding-left: 0;
-    & > li {
-        float: left;
-        width: 49%;
+	padding-right: 0;
+	 padding-left: 0;
+	& > li {
+		float: left;
+		width: 49%;
 		padding: 0;
-        border: 1px solid @hex-darker-gray;
-        border-radius: 7px;
-        margin-bottom: 2%;
+		border: 1px solid @hex-darker-gray;
+		border-radius: 7px;
+		margin-bottom: 2%;
 		overflow: hidden;
-        box-shadow: 1px 1px 1px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.2);
+		box-shadow: 1px 1px 1px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.2);
 		background: @hex-white;
-        list-style-type: none;
+		list-style-type: none;
 		z-index: 0;
-        & > div.title { 
+		& > div.title { 
 			position: relative;
 			width: 100%;
 			height: 211px;
@@ -124,7 +126,7 @@ div.column ul.residence-hall-courses {
 				font-weight: bold;
 				text-transform: uppercase;
 				text-shadow: 1px 1px 1px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.75),
-				             0px 0px 18px @hex-black;
+							 0px 0px 18px @hex-black;
 				.transform(~"translate(-50%, -50%)");
 			}
 		}
@@ -146,56 +148,280 @@ div.column ul.residence-hall-courses {
 		& > div.title:first-child + p.hidden-info {
 			padding-top: @v-btm-mrgns;			
 		}
-		&.community > div.title {
-			background: #615647 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_community.jpg) no-repeat scroll center top;
+		&.community {
+			& > div.title {
+				background: #615647 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_community.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: #615647;
+			}
 		}
-		&.gannon-goldsworthy > div.title  {
-			background: #6e6365 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_gannon-goldsworthy.jpg) no-repeat scroll center top;
+		&.gannon-goldsworthy {
+			& > div.title  {
+				background: #6e6365 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_gannon-goldsworthy.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: #6e6365;
+			}
 		}
-		&.global > div.title {
-			background: #646878 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_global-scholars.jpg) no-repeat scroll center top;
+		&.global {
+			& > div.title {
+				background: #646878 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_global-scholars.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: #646878;
+			}
 		}
-		&.honors > div.title {
-			background: #c69f86 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_honors.jpg) no-repeat scroll center top;
+		&.honors {
+			& > div.title {
+				background: #c69f86 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_honors.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: multiply(#c69f86, @drkn-clr);
+			}
 		}
-		&.mceachern > div.title {
-			background: #916251 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_mceachern.jpg) no-repeat scroll center top;
+		&.mcroskey {
+			& > div.title {
+				background: #83806c url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_mcroskey.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: #83806c;
+			}
 		}
-		&.mcroskey > div.title {
-			background: #83806c url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_mcroskey.jpg) no-repeat scroll center top;
+		&.mceachern {
+			& > div.title {
+				background: #916251 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_mceachern.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: #916251;
+			}
 		}
-		&.northside > div.title {
-			background: #b1aec2 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_northside.jpg) no-repeat scroll center top;
+		&.northside {
+			& > div.title {
+				background: #b1aec2 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_northside.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: multiply(#b1aec2, @drkn-clr);
+			}
 		}
-		&.olympia > div.title {
-			background: #566d84 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_olympia.jpg) no-repeat scroll center top;
+		&.olympia {
+			& > div.title {
+				background: #566d84 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_olympia.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: #566d84;
+			}
 		}
-		&.orton > div.title {
-			background: #c5bbb2 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_orton.jpg) no-repeat scroll center top;
+		&.orton {
+			& > div.title {
+				background: #c5bbb2 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_orton.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: multiply(#c5bbb2, @drkn-clr);
+			}
 		}
-		&.regents > div.title {
-			background: #625958 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_regents.jpg) no-repeat scroll center top;
+		&.regents {
+			& > div.title {
+				background: #625958 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_regents.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: #625958;
+			}
 		}
-		&.rogers > div.title {
-			background: #413831 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_rogers-02.jpg) no-repeat scroll center top;
+		&.rogers {
+			& > div.title {
+				background: #413831 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_rogers-02.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: #413831;
+			}
 		}
-		&.scott-coman > div.title {
-			background: #d7d0c1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_scott-coman.jpg) no-repeat scroll center top;
+		&.scott-coman {
+			& > div.title {
+				background: #d7d0c1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_scott-coman.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: multiply(#d7d0c1, @drkn-clr);
+			}
 		}
-		&.stimson > div.title {
-			background: #88796b url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stimson.jpg) no-repeat scroll center top;
+		&.stimson {
+			& > div.title {
+				background: #88796b url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stimson.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: #88796b;
+			}
 		}
-		&.stephenson > div.title {
-			background: #a26e58 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stephenson.jpg) no-repeat scroll center top;
+		&.stephenson {
+			& > div.title {
+				background: #a26e58 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stephenson.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: multiply(#a26e58, @drkn-clr);
+			}
 		}
-		&.stevens > div.title {
-			background: #5c6979 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stevens.jpg) no-repeat scroll center top;
+		&.stevens {
+			& > div.title {
+				background: #5c6979 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_stevens.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: #5c6979;
+			}
 		}
-		&.streit-perham > div.title {
-			background: #acb1b1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_streit-perham.jpg) no-repeat scroll center top;
+		&.streit-perham {
+			& > div.title {
+				background: #acb1b1 url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_streit-perham.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: multiply(#acb1b1, @drkn-clr);
+			}
 		}
-		&.wilmer-davis > div.title {
-			background: #75779a url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_wilmer-davis.jpg) no-repeat scroll center top;
+		&.wilmer-davis {
+			& > div.title {
+				background: #75779a url(/wp-content/uploads/sites/53/2016/06/panel_residance-halls_wilmer-davis.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: #75779a;
+			}
 		}
-    }
+	}
+}
+
+@lghtn-clr: #ffffff; /* Color that is mixed with residence-hall specific colors. */
+@clr-balance: 80%;
+
+ul.fyf-instructors {
+	padding-right: 0;
+	 padding-left: 0;
+	& > li {
+		float: left;
+		width: 49%;
+		margin-bottom: 2%;
+		overflow-x: auto;
+		border: 1px solid darken(#d9d9d9, 12%);
+		border-radius: 7px;
+		list-style-type: none;
+		box-shadow: 1px 1px 1px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.2);
+		& > p {
+			padding-left: 7px;
+			padding-right: 7px;
+			text-align: left;
+			& > img {
+				float: left;
+				width: 96px;
+				border-radius: 7px;
+				margin: 4px 11px 4px 4px;
+			}
+			&:first-child {
+				padding-top: 7px;
+				font-size: 1.4em;
+				font-weight: bold;
+			}
+			&:last-child {
+				padding-bottom: 7px;
+			}
+		}
+		&.community {
+			background-color: mix(@lghtn-clr, #615647, @clr-balance);
+			& > p:first-child {
+				color: #615647;
+			}
+		}
+		&.gannon-goldsworthy {
+			background-color: mix(@lghtn-clr, #6e6365, @clr-balance);
+			& > p:first-child {
+				color: #6e6365;
+			}
+		}
+		&.global {
+			background-color: mix(@lghtn-clr, #646878, @clr-balance);
+			& > p:first-child {
+				color: #646878;
+			}
+		}
+		&.honors {
+			background-color: mix(@lghtn-clr, multiply(#c69f86, @drkn-clr), @clr-balance);
+			& > p:first-child {
+				color: multiply(#c69f86, @drkn-clr);
+			}
+		}
+		&.mcroskey {
+			background-color: mix(@lghtn-clr, #83806c, @clr-balance);
+			& > p:first-child {
+				color: #83806c;
+			}
+		}
+		&.mceachern {
+			background-color: mix(@lghtn-clr, #916251, @clr-balance);
+			& > p:first-child {
+				color: #916251;
+			}
+		}
+		&.northside {
+			background-color: mix(@lghtn-clr, multiply(#b1aec2, @drkn-clr), @clr-balance);
+			& > p:first-child {
+				color: multiply(#b1aec2, @drkn-clr);
+			}
+		}
+		&.olympia {
+			background-color: mix(@lghtn-clr, #566d84, @clr-balance);
+			& > p:first-child {
+				color: #566d84;
+			}
+		}
+		&.orton {
+			background-color: mix(@lghtn-clr, multiply(#c5bbb2, @drkn-clr), @clr-balance);
+			& > p:first-child {
+				color: multiply(#c5bbb2, @drkn-clr);
+			}
+		}
+		&.regents {
+			background-color: mix(@lghtn-clr, #625958, @clr-balance);
+			& > p:first-child {
+				color: #625958;
+			}
+		}
+		&.rogers {
+			background-color: mix(@lghtn-clr, #413831, @clr-balance);
+			& > p:first-child {
+				color: #413831;
+			}
+		}
+		&.scott-coman {
+			background-color: mix(@lghtn-clr, multiply(#d7d0c1, @drkn-clr), @clr-balance);
+			& > p:first-child {
+				color: multiply(#d7d0c1, @drkn-clr);
+			}
+		}
+		&.stimson {
+			background-color: mix(@lghtn-clr, #88796b, @clr-balance);
+			& > p:first-child {
+				color: #88796b;
+			}
+		}
+		&.stephenson {
+			background-color: mix(@lghtn-clr, multiply(#a26e58, @drkn-clr), @clr-balance);
+			& > p:first-child {
+				color: multiply(#a26e58, @drkn-clr);
+			}
+		}
+		&.stevens {
+			background-color: mix(@lghtn-clr, #5c6979, @clr-balance);
+			& > p:first-child {
+				color: #5c6979;
+			}
+		}
+		&.streit-perham {
+			background-color: mix(@lghtn-clr, multiply(#acb1b1, @drkn-clr), @clr-balance);
+			& > p:first-child {
+				color: multiply(#acb1b1, @drkn-clr);
+			}
+		}
+		&.wilmer-davis {
+			background-color: mix(@lghtn-clr, #75779a, @clr-balance);
+			& > p:first-child {
+				color: #75779a;
+			}
+		}
+	}
 }

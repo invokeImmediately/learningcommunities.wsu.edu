@@ -4409,7 +4409,7 @@ ul.fyf-instructors > li > p {
   text-align: left;
 }
 ul.fyf-instructors > li > p > img {
-  float: right;
+  float: left;
   width: 96px;
   border-radius: 7px;
   margin: 4px 7px 4px 4px;

@@ -4417,6 +4417,7 @@ ul.fyf-instructors > li > p > img {
 ul.fyf-instructors > li > p:first-child {
   padding-top: 7px;
   font-size: 1.4em;
+  font-weight: bold;
 }
 ul.fyf-instructors > li > p:last-child {
   padding-bottom: 7px;

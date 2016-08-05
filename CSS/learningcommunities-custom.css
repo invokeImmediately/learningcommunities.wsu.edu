@@ -4412,7 +4412,7 @@ ul.fyf-instructors > li > p > img {
   float: left;
   width: 96px;
   border-radius: 7px;
-  margin: 4px 7px;
+  margin: 4px 11px 4px 4px;
 }
 ul.fyf-instructors > li > p:first-child {
   padding-top: 7px;

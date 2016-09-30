@@ -2694,7 +2694,7 @@ div.column .has-larger-text {
   font-size: larger;
 }
 div.column .has-smaller-text {
-  font-size: smaller;
+  font-size: smaller !important;
 }
 @media (min-width: 1050px) {
   div.column .large-format-friendly {

@@ -2694,7 +2694,7 @@ div.column .has-larger-text {
   font-size: larger;
 }
 div.column .has-smaller-text {
-  font-size: smaller !important;
+  font-size: smaller;
 }
 @media (min-width: 1050px) {
   div.column .large-format-friendly {
@@ -5816,7 +5816,8 @@ div.auto-scroller ul li {
   }
 }
 main {
-  background: #fff url(/wp-content/uploads/sites/53/2016/05/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;
+  /*background: @hex-white url(/wp-content/uploads/sites/53/2016/05/tileable-papar-texture_500x500_opacity-0.5.png) left top repeat;*/
+  background: #fff;
 }
 @media all and (min-width: 1441px) {
   #binder {

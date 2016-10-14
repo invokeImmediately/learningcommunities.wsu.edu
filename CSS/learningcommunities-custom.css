@@ -1565,15 +1565,15 @@ div.column header:first-child + h3.fancy.with-top-border {
 footer.article-footer div.author-info {
   display: none;
 }
-/*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
- *  │ ++++++++ div.column ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *  │ ++++++++ PARAGRAPHS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *  ├----------------------------------------------------------------------------------------------┤
- *  │ Styling for paragraph elements intended as children of div.column elements as defined in the │
- *  │ WSU Spine theme for WordPress.                                                               │
- *  │  ╘═» This file assumes [//github.com/invokeImmediately/WSU-UE---CSS/color-palette.less] has  │
- *  │       already been imported.                                                                 │
- *  ├----------------------------------------------------------------------------------------------┤
+/*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+ *     │ ++++++++ div.column +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+ *     │ ++++++++ PARAGRAPHS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+ *     ├-------------------------------------------------------------------------------------------------┤
+ *     │ Styling for paragraph elements intended as children of div.column elements as defined in the    │
+ *     │ WSU Spine theme for WordPress.                                                                  │
+ *     │  ╘═» This file assumes [//github.com/invokeImmediately/WSU-UE---CSS/color-palette.less] has     │
+ *     │       already been imported.                                                                    │
+ *     ├-------------------------------------------------------------------------------------------------┤
  */
 @media all {
   section.row.single div.column p {
@@ -2131,25 +2131,25 @@ div.column p.article-tagline.sans > span.lead-in {
   font-weight: 700;
   letter-spacing: normal;
 }
-div.column p.article-tagline {
+div.column p.article-tagline:not(.has-no-bordering) {
   position: relative;
   padding-top: 0.33333333rem !important;
   padding-bottom: 0.33333333rem !important;
   margin-top: 0.33333333rem;
 }
-div.column p.article-tagline:before,
-div.column p.article-tagline:after {
+div.column p.article-tagline:not(.has-no-bordering):before,
+div.column p.article-tagline:not(.has-no-bordering):after {
   content: "";
   position: absolute;
   left: 0;
   width: 67%;
 }
-div.column p.article-tagline:before {
+div.column p.article-tagline:not(.has-no-bordering):before {
   top: -0.33333333rem;
   height: 5px;
   border-top: 5px solid rgba(70, 78, 84, 0.33);
 }
-div.column p.article-tagline:after {
+div.column p.article-tagline:not(.has-no-bordering):after {
   bottom: -0.33333333rem;
   height: 1px;
   width: 33%;
@@ -2456,7 +2456,7 @@ div.column p.banner-text-orange-with-towers {
     font-size: 1.099805em;
   }
 }
-/*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
+/*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
  */
 div.article-body {
   position: relative;

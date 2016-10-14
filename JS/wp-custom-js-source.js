@@ -126,9 +126,14 @@
 })(jQuery);/**********************************************************************************************************************
  CUSTOM JQUERY-BASED DYNAMIC CONTENT
  *********************************************************************************************************************/
+"use strict";
+
+function isJQuery($obj) {
+	return ($obj && ($obj instanceof jQuery || $obj.constructor.prototype.jquery));
+}
+
 (function ($) {
-    "use strict";
-    
+	"use strict";
     $(document).ready(function () {
         fixDogears("#spine-sitenav", "li.current.active.dogeared", "current active dogeared");
         checkForLrgFrmtSingle(".single.large-format-friendly", "header.main-header", "div.header-group",
@@ -147,17 +152,19 @@
         initContentFlippers(".content-flipper", ".flipped-content-front", ".flipped-content-back", 500);
         initDefinitionLists("dl.toggled", ".large-format-friendly", "div.column.one", "div.column.two",
          "activated", 400, 100);
+		initQuickTabs("section.row.single.quick-tabs");
         initTriggeredByHover(".triggered-on-hover", ".content-revealed", ".content-hidden", 200);
+		// initScrollingSidebars("...");
         initWelcomeMessage("#welcome-message", "post-welcome-message", 1000, 500, 500);
     });
     
     $(window).load(function () {
-        finalizeLrgFrmtSideRight(".side-right.large-format-friendly", "div.column.two", "div.column.two",
+        finalizeLrgFrmtSideRight(".side-right.large-format-friendly", "div.column.one", "div.column.two",
          1051, 100);
     });
     
     $(window).resize(function () {
-        resizeLrgFrmtSideRight(".side-right.large-format-friendly", "div.column.two", "div.column.two",
+        resizeLrgFrmtSideRight(".side-right.large-format-friendly", "div.column.one", "div.column.two",
          1051, 100);
     });
     
@@ -286,6 +293,66 @@
         });
     }
     
+	function initQuickTabs(slctrQtSctn) {
+		var $qtSctn = $(slctrQtSctn);
+		$qtSctn.each(function () {
+			var $thisSctn = $(this);
+			var $tabCntnr = $thisSctn.find("div.column > ul");
+			var $tabs = $tabCntnr.find("li");
+			var $panelCntnr = $thisSctn.find("table");
+			var $panels = $panelCntnr.find("tbody:first-child > tr");
+			if($tabs.length == $panels.length) {
+				var idx;
+				var jdx;
+				for (idx = 0; idx < $tabs.length; idx++) {
+					$tabs.eq(idx).click(function() {
+						var $thisTab = $(this);
+						var kdx = $tabs.index($thisTab);
+						if (kdx == 0) {
+							if ($thisTab.hasClass("deactivated")) {
+								$thisTab.removeClass("deactivated");
+								$panels.eq(kdx).removeClass("deactivated");
+								for (jdx = 1; jdx < $tabs.length; jdx++) {
+									if ($tabs.eq(jdx).hasClass("activated")) {
+										$tabs.eq(jdx).removeClass("activated");
+										$panels.eq(jdx).removeClass("activated");
+									}
+								}
+								$("html, body").animate({
+									scrollTop: $thisTab.offset().top
+								}, 500);								
+							}
+						} else {
+							if (!$thisTab.hasClass("activated")) {
+								if (!$tabs.eq(0).hasClass("deactivated")) {
+									$tabs.eq(0).addClass("deactivated");
+									$panels.eq(0).addClass("deactivated");
+								}
+								for (jdx = 1; jdx < kdx; jdx++) {
+									if ($tabs.eq(jdx).hasClass("activated")) {
+										$tabs.eq(jdx).removeClass("activated");
+										$panels.eq(jdx).removeClass("activated");
+									}
+								}
+								$thisTab.addClass("activated");
+								$panels.eq(kdx).addClass("activated");
+								for (jdx = kdx + 1; jdx < $tabs.length; jdx++) {
+									if ($tabs.eq(jdx).hasClass("activated")) {
+										$tabs.eq(jdx).removeClass("activated");
+										$panels.eq(jdx).removeClass("activated");
+									}
+								}
+								$("html, body").animate({
+									scrollTop: $thisTab.offset().top
+								}, 500);								
+							}
+						}
+					});
+				}
+			}
+		});
+	}
+
     function initReadMoreToggles(slctrToggleIn, slctrToggleOut, slctrPanel, animDuration) {
         $(slctrToggleIn).click(function () {
             var $this = $(this);
@@ -332,12 +399,12 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
             $this = $(this);
             $this.hasClass('blue') ? qTipStyle = 'qtip-blue' : qTipStyle = 'qtip-dark';
             if ($this.hasClass('parental-neighbor-is-source')) {
-                qTipCntnt = new QTipContent($this.parent().next('div').text());
+                qTipCntnt = new QTipContent($this.parent().next('div'));
                 if (qTipCntnt.qTipTitle == null) {
                     $this.qtip({
                         style: qTipStyle,
                         content: {
-                            text: qTipCntnt.qTipText
+                            text: qTipCntnt.qTipInnerHTML
                         },
                         position: {
                             target: 'mouse', // Track the mouse as the positioning target
@@ -360,7 +427,7 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
                         style: qTipStyle,
                         content: {
                             title: qTipCntnt.qTipTitle,
-                            text: qTipCntnt.qTipText
+                            text: qTipCntnt.qTipInnerHTML
                         },
                         position: {
                             target: 'mouse', // Track the mouse as the positioning target
@@ -380,12 +447,12 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
                 }
             } else {
                 $this.hasClass('span-is-source') ? qTipContentSource = 'span' : qTipContentSource = 'div';
-                qTipCntnt = new QTipContent($this.next(qTipContentSource).text());
+                qTipCntnt = new QTipContent($this.next(qTipContentSource));
                 if (qTipCntnt.qTipTitle == null) {
                     $this.qtip({
                         style: qTipStyle,
                         content: {
-                            text: qTipCntnt.qTipText
+                            text: qTipCntnt.qTipInnerHTML
                         },
                         position: {
                             target: 'mouse', // Track the mouse as the positioning target
@@ -408,7 +475,7 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
                         style: qTipStyle,
                         content: {
                             title: qTipCntnt.qTipTitle,
-                            text: qTipCntnt.qTipText
+                            text: qTipCntnt.qTipInnerHTML
                         },
                         position: {
                             target: 'mouse', // Track the mouse as the positioning target
@@ -430,16 +497,20 @@ e===O?(h=c===H?L:K,j[h]="50%",j[ib+"-"+h]=-Math.round(b[c===H?0:1]/2)+i):(h=f._p
         });       
     });
     
-    function QTipContent(srcText) {
+    function QTipContent($qTipSlctr) {
         this.qTipTitle = null;
         this.qTipText = null;
+        this.qTipInnerHTML = null;
         var regExPttrn = /^(.+)\|(.+)$/;
-        var regExResult = regExPttrn.exec(srcText);
+        var regExResult = regExPttrn.exec($qTipSlctr.text());
         if (regExResult != null && regExResult.length == 3) {
             this.qTipTitle = regExResult[1];
-            this.qTipText = regExResult[2];            
+            this.qTipText = regExResult[2];
+            regExPttrn = /^(.+)\|/;
+            this.qTipInnerHTML = $qTipSlctr.html().replace(regExPttrn, "");
         } else {
-            this.qTipText = srcText;
+            this.qTipText = $qTipSlctr.text();
+            this.qTipInnerHTML = $qTipSlctr.html();
         }
     }
 })(jQuery);/*!

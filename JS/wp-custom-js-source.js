@@ -270,8 +270,11 @@ function isJQuery($obj) {
     function initHrH2Motif(slctrStandardH2, slctrPrevHr, h2ClassesAdded, hrClassesAdded, animAddDrtn) {
         $(slctrStandardH2).each(function () {
                 var $this = $(this);
-                $this.addClass(h2ClassesAdded);
-                $this.prev(slctrPrevHr).addClass(hrClassesAdded, animAddDrtn);
+				var $prevElem = $this.prev(slctrPrevHr);
+				if ($prevElem.length > 0) {
+					$this.addClass(h2ClassesAdded);
+					$prevElem.addClass(hrClassesAdded, animAddDrtn);
+				}
         });
     }
     
@@ -289,7 +292,7 @@ function isJQuery($obj) {
     
     function initFancyHrH3Motif(slctrFancyH3, slctrPrevHr, hrClassesAdded, animAddDrtn) {
         $(slctrFancyH3).each(function () {
-                $(this).prev(slctrPrevHr).addClass(hrClassesAdded, animAddDrtn);
+            $(this).prev(slctrPrevHr).addClass(hrClassesAdded, animAddDrtn);
         });
     }
     

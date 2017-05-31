@@ -36,7 +36,8 @@ span.accentuated-text {
 .margin-centered,
 .column .margin-centered,
 img.shiftToCenter,
-img.shift-to-center {
+img.shift-to-center,
+#binder.fluid.max-1188 .row.halves .column img.auto-scaled {
   margin-right: auto;
   margin-left: auto;
 }
@@ -2843,13 +2844,13 @@ p.article-tagline:not(.has-no-bordering).alt:after {
   right: 3px;
   background-color: rgba(70, 78, 84, 0.75757576);
 }
-.column h1 + p.article-tagline,
-.column h2 + p.article-tagline,
-.column h3 + p.article-tagline,
-.column h4 + p.article-tagline,
-.column h5 + p.article-tagline,
-.column h6 + p.article-tagline,
-.gform_heading h3.gform_title + p.article-tagline {
+.column h1 + p.article-tagline:not(.has-no-bordering):not(.alt),
+.column h2 + p.article-tagline:not(.has-no-bordering):not(.alt),
+.column h3 + p.article-tagline:not(.has-no-bordering):not(.alt),
+.column h4 + p.article-tagline:not(.has-no-bordering):not(.alt),
+.column h5 + p.article-tagline:not(.has-no-bordering):not(.alt),
+.column h6 + p.article-tagline:not(.has-no-bordering):not(.alt),
+.gform_heading h3.gform_title + p.article-tagline:not(.has-no-bordering):not(.alt) {
   margin-top: 1.33333333rem;
 }
 @media all {
@@ -4052,8 +4053,13 @@ section.pad-top div.column.half-pad {
     max-width: 792px;
   }
 }
-main > div.page > section.row:last-child > div.column {
+main > .page > .row:last-child > .column:last-child {
   padding-bottom: 2rem;
+}
+@media all and (min-width: 694px) {
+  main > .page > .row:last-child.halves > .column:first-child {
+    padding-bottom: 2rem;
+  }
 }
 /*         └-----------------------------------------------------------------------------------------┘        
  */
@@ -5352,6 +5358,10 @@ img.symbolic-image {
   img.hide-on-mobile {
     display: none;
   }
+}
+#binder.fluid.max-1188 .row.halves .column img.auto-scaled {
+  display: block;
+  max-width: 444px;
 }
 figure figcaption {
   font-size: 0.85em;

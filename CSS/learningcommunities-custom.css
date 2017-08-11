@@ -7397,7 +7397,7 @@ main {
   background-attachment: fixed;
 }
 header.main-header {
-  background: #464e54 url(/wp-content/uploads/sites/53/2016/05/background_page-header.jpg) no-repeat scroll center center;
+  background: #464e54 url(/wp-content/uploads/sites/53/2016/05/background_page-header.jpg) center center / cover no-repeat;
   color: #fff !important;
 }
 .main-header sub:not(.unset),

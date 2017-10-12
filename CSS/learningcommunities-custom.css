@@ -771,15 +771,55 @@ html {
 .column article.post + article.post {
   margin-top: 1.5em;
 }
-.row.new-article-section {
+.row.h1-header.new-article-section {
   padding: 1rem;
 }
-.row.new-article-section h1,
-.row.new-article-section h2,
-.row.new-article-section h3,
-.row.new-article-section h4,
-.row.new-article-section h5,
-.row.new-article-section h6 {
+.row.h1-header.new-article-section h1,
+.row.h1-header.new-article-section h2,
+.row.h1-header.new-article-section h3,
+.row.h1-header.new-article-section h4,
+.row.h1-header.new-article-section h5,
+.row.h1-header.new-article-section h6 {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  text-align: center;
+}
+.row.side-right .column.one.new-article-section header {
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  margin-left: -2rem;
+}
+.row.side-right .column.two.new-article-section header {
+  padding: 1rem 2rem;
+  margin-right: -2.01rem;
+  margin-bottom: 2rem;
+}
+.row.side-right .column.one.new-article-section header,
+.row.side-right .column.two.new-article-section header {
+  background-color: #2f3438;
+  color: #fff;
+}
+@media only screen and (min-width: 361px) and (max-width: 480px) {
+  .row.side-right .column.one.new-article-section header,
+  .row.side-right .column.two.new-article-section header {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .row.side-right .column.one.new-article-section header,
+  .row.side-right .column.two.new-article-section header {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+  }
+}
+.row.side-right .column.one.new-article-section header > *,
+.row.side-right .column.two.new-article-section header > * {
   padding: 0;
   margin: 0;
   color: inherit;
@@ -1442,6 +1482,10 @@ main section.row > .column table > tbody > tr > td > div > ol:last-child {
   .quarters.gutter .column:nth-of-type(4n+8):not(.gutterless) {
     padding-left: 0.5rem;
   }
+  section.gutter > header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 @media only screen and (max-width: 360px) {
   .gutter .column:not(.gutterless),
@@ -1499,6 +1543,10 @@ main section.row > .column table > tbody > tr > td > div > ol:last-child {
   .quarters.gutter .column:nth-of-type(4n+8):not(.gutterless) {
     padding-left: 0.25rem;
   }
+  section.gutter > header {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
 @media all and (max-width: 693px) {
   .row:not(.pad-top).halves .one ~ .column,
@@ -1519,6 +1567,18 @@ aside.shield-themed {
   background: #eff0f1;
   color: #464e54;
   font-size: 0.925rem;
+}
+aside.shield-themed.floats-left {
+  float: left;
+}
+aside.shield-themed.floats-right {
+  float: right;
+}
+@media all and (min-width: 694px) {
+  aside.shield-themed.floats-left,
+  aside.shield-themed.floats-right {
+    width: 33.3333%;
+  }
 }
 aside.shield-themed > h1:first-child,
 aside.shield-themed > h2:first-child,
@@ -3805,6 +3865,7 @@ body.single-post .column p.article-media-contacts + :not(.article-media-contacts
   }
 }
 .column ul {
+  padding-right: 0;
   padding-bottom: 0;
 }
 .column ul ol,
@@ -4123,6 +4184,7 @@ ul.cascaded-layout.blank > li.gutter-sizer {
   }
 }
 .column ol {
+  padding-right: 0;
   padding-bottom: 0;
 }
 .column ol li {
@@ -4358,25 +4420,90 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 }
 /*!   └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-div.article-body {
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ NEWS POSTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+.article-body {
   position: relative;
   line-height: 1.375em;
 }
-div.article-summary {
+.article-summary {
   line-height: 1.375em;
 }
-div.article-summary aside.article-sidebar,
-div.article-summary img,
-div.article-summary object,
-div.article-summary p.article-media-contacts,
-div.article-summary > h3,
-div.article-summary p.photo-caption {
+.article-summary aside.article-sidebar,
+.article-summary img,
+.article-summary object,
+.article-summary p.article-media-contacts,
+.article-summary > h3,
+.article-summary p.photo-caption {
   display: none;
 }
-div.article-summary img.attachment-spine-thumbnail_size {
+.article-summary img.attachment-spine-thumbnail_size {
   display: block;
 }
-div.award-banner {
+body.single-post .main-header + .featured-image {
+  display: none;
+}
+.wsuwp-content-syndicate-wrapper {
+  font-size: 0.9rem;
+}
+.column .wsuwp-content-syndicate-list {
+  list-style-type: none;
+  padding: 0;
+}
+.page.home .column .wsuwp-content-syndicate-item {
+  float: left;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0 2rem 2rem 0;
+  line-height: 1.375em;
+  list-style-image: none !important;
+}
+.page.home .column .wsuwp-content-syndicate-item .content-item-title {
+  font-size: 1.33333333em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.page.home .column .wsuwp-content-syndicate-item .content-item-title a {
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+.page.home .column .wsuwp-content-syndicate-item .content-item-title a:hover {
+  background-color: transparent;
+}
+.page.home .column .wsuwp-content-syndicate-item .content-item-byline-author {
+  display: none;
+}
+.page.home .column .wsuwp-content-syndicate-item .content-item-byline-date {
+  display: block;
+  padding-bottom: 0.25em;
+  margin-top: 0.5em;
+  margin-bottom: 0.75em;
+  border-bottom: 1px solid rgba(127, 127, 127, 0.2);
+  color: #737373;
+  text-transform: uppercase;
+}
+.page.home .column .wsuwp-content-syndicate-item .content-item-byline-date:before {
+  content: "Posted on ";
+}
+.page.home .column .wsuwp-content-syndicate-item .content-item-excerpt .article-sidebar,
+.page.home .column .wsuwp-content-syndicate-item .content-item-excerpt img,
+.page.home .column .wsuwp-content-syndicate-item .content-item-excerpt object,
+.page.home .column .wsuwp-content-syndicate-item .content-item-excerpt .article-media-contacts,
+.page.home .column .wsuwp-content-syndicate-item .content-item-excerpt > h3,
+.page.home .column .wsuwp-content-syndicate-item .content-item-excerpt .photo-caption,
+.page.home .column .wsuwp-content-syndicate-item .content-item-excerpt .more-link {
+  display: none;
+}
+.page.home .column .wsuwp-content-syndicate-item .content-item-excerpt > * + *,
+.page.home .column .wsuwp-content-syndicate-item .content-item-excerpt .content-item-read-story {
+  margin-top: 1em;
+}
+.page.home .column .wsuwp-content-syndicate-item .content-item-excerpt .content-item-read-story {
+  display: inline-block;
+}
+.award-banner {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -5570,11 +5697,11 @@ div.recent-updates p.recent-update-3 {
   border-bottom: 0.0625em solid rgba(198, 12, 48, 0.2);
   box-shadow: inset 0 -0.3125em 0 rgba(198, 12, 48, 0.2);
 }
-.column h1 > a,
-.column h2 > a,
-.column h3 > a,
-.column h4 > a,
-.gform_heading h3.gform_title > a {
+.column h1 > a.stays-underlined,
+.column h2 > a.stays-underlined,
+.column h3 > a.stays-underlined,
+.column h4 > a.stays-underlined,
+.gform_heading h3.gform_title > a.stays-underlined {
   line-height: 1.35em;
 }
 .column h1 > a:not(.stays-underlined),
@@ -6784,6 +6911,10 @@ div.read-more-target {
 *         │ ···· Drop-down toggle: upon click, either drops down or pulls up a related element ······················ │
 *         └-----------------------------------------------------------------------------------------------------------┘
 */
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ DROP-DOWN TOGGLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 .drop-down-toggle {
   position: relative;
   -webkit-transition: all 0.3s ease;
@@ -6924,6 +7055,9 @@ div.read-more-target {
 .drop-down-toggle.boxed + .drop-down-toggle.boxed,
 .drop-down-toggle.boxed + .toggled-panel + .drop-down-toggle.boxed {
   margin-top: 0.5rem;
+}
+.drop-down-toggle.boxed + .toggled-panel + :not(.drop-down-toggle) {
+  margin-top: 1rem;
 }
 .drop-down-toggle.boxed.blue {
   background-color: rgba(0, 165, 189, 0.1);
@@ -7587,7 +7721,7 @@ x:-o-prefocus {
 *         └-----------------------------------------------------------------------------------------------------------┘
 */
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ARTICLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ EVENTS CALENDAR PLUGIN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐

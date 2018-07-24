@@ -1,0 +1,25 @@
+{
+  "name": "learningcommunities.wsu.edu",
+  "version": "1.0.0",
+  "description": "Website of the WSU First Year Focus Program in the Office of Undergraduate Education.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invokeImmediately/learningcommunities.wsu.edu.git"
+  },
+  "keywords": [
+    "WSU",
+    "Washington",
+    "State",
+    "University"
+  ],
+  "author": "Daniel Rieck <danielcrieck@gmail.com> (https://www.linkedin.com/in/danielcrieck/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/invokeImmediately/learningcommunities.wsu.edu/issues"
+  },
+  "homepage": "https://github.com/invokeImmediately/learningcommunities.wsu.edu#readme"
+}

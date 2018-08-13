@@ -8149,25 +8149,8 @@ div.auto-scroller ul li {
 ***     (Please see above git repository for fully documented, precompiled source code.)
 *** ================================================================================================
 **/
-@media all and (max-width: 1440px) {
-  body {
-    background: #981e32;
-  }
-}
-@media all and (min-width: 1441px) and (max-width: 1920px) {
-  body {
-    background: #981e32 url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wuxga.jpg) repeat-y fixed right top;
-  }
-}
-@media all and (min-width: 1921px) and (max-width: 2560px) {
-  body {
-    background: #981e32 url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wqxga.jpg) repeat-y fixed right top;
-  }
-}
-@media all and (min-width: 2561px) {
-  body {
-    background: #981e32 url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wqxga.jpg) repeat-y fixed 1800px top;
-  }
+body {
+  background: #981e32;
 }
 main {
   background: #fff;

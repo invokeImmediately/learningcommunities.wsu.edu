@@ -1,17 +1,50 @@
+/*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+**  │ FILENAME: learningcommunities-custom.less                                                    │
+**  │                                                                                              │
+**  │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)           │
+**  │                                                                                              │
+**  │ SUMMARY: Style rules for presenting content on the website for the WSU First-Year Focus      │
+**  │   Program, which is built using the builder template of the Spine parent theme of WSUWP.     │
+**  │   Styles are designed to accompany or supersede styling associated with the theme.           │
+**  └──────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+
+/*    ----------------------------------------------------------------------------------------------
+**    §1: Settings for global Less variables
+*/
+
 @grid-behavior: "hybrid";
+@oue-rules-wrapper: ~"";
+
+/*    ----------------------------------------------------------------------------------------------
+**    §2: Import of OUE-wide style rules
+*/
+
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 
+/*! ================================================================================================
+*** STYLE RULES SPECIFIC TO THE FIRST-YEAR FOCUS WEBSITE
+*** ================================================================================================
+***   GIT REPOSITORY: https://github.com/invokeImmediately/learningcommunities.wsu.edu/
+***     (Please see above git repository for fully documented, precompiled source code.)
+*** ================================================================================================
+**/
+
+/*    ----------------------------------------------------------------------------------------------
+**    §3: Styling at body & page level
+*/
+
 body {
-	@media all and (max-width: @v-wdscrn-bckgrnd) {
+	@media all and (max-width: @widescreen-background-width) {
 		background: @hex-crimson;
 	}
-	@media all and (min-width: (@v-wdscrn-bckgrnd+1)) and (max-width: @v-wuxga-width) {
+	@media all and (min-width: (@widescreen-background-width+1)) and (max-width: @wuxga-width) {
 		background: @hex-crimson  url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wuxga.jpg) repeat-y fixed right top;
 	}
-	@media all and (min-width: (@v-wuxga-width+1)) and (max-width: @v-wqxga-width) {
+	@media all and (min-width: (@wuxga-width+1)) and (max-width: @wqxga-width) {
 		background: @hex-crimson url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wqxga.jpg) repeat-y fixed right top;
 	}
-	@media all and (min-width: (@v-wqxga-width+1)) {
+	@media all and (min-width: (@wqxga-width+1)) {
 		background: @hex-crimson url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wqxga.jpg) repeat-y fixed 1800px top;
 	}
 }
@@ -21,7 +54,7 @@ main {
 }
 
 #binder {
-	@media all and (min-width: (@v-wdscrn-bckgrnd + 1)) {
+	@media all and (min-width: (@widescreen-background-width + 1)) {
 		border-right: 1px solid rgba(red(@hex-darker-gray), blue(@hex-darker-gray), green(@hex-darker-gray),0.5);
 		box-shadow: 5px 0 5px rgba(red(@hex-darkest-gray), blue(@hex-darkest-gray), green(@hex-darkest-gray),0.5);
 	}
@@ -33,11 +66,23 @@ main {
 	background-attachment: fixed;
 }
 
+/*    ----------------------------------------------------------------------------------------------
+**    §4: Styling at the section level
+*/
+
+/*      ····························································································
+**      >>> §4.1: Headers
+*/
+
+/*         · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
+**         →→→ §4.1.1: Main header
+*/
+
 header.main-header {
 	&:extend(.has-dflt-font);
 	background: @hex-darker-gray url(/wp-content/uploads/sites/53/2016/05/background_page-header.jpg) center center/cover no-repeat;
 	color: #fff !important;
-//	@media all and (min-width: (@v-wdscrn-bckgrnd + 1)) {
+//	@media all and (min-width: (@widescreen-background-width + 1)) {
 //		border-right: 1px solid rgba(red(@hex-darker-gray), blue(@hex-darker-gray), green(@hex-darker-gray),0.5);
 //	}
 }
@@ -46,13 +91,10 @@ header.main-header {
 	color: #fff !important;
 }
 
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### ASIDE.ARTICLE-SIDEBAR ################################################################# ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the DSP website.                                             ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
- */
+/*      ····························································································
+**      >>> §4.2: Asides
+*/
+
 div.column {
 	aside {
 		font-size: .8rem;
@@ -71,13 +113,14 @@ div.column {
 	}
 }
 
-/*  ╔══════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### LIST STYLES ########################################################################### ║
- *  ╠==============================================================================================╣
- *  ║ Containers designed to be used as custom sidebars within a div.column element.               ║
- *  ║  ╘═» Customized here for use on the SURCA website.                                           ║
- *  ╚══════════════════════════════════════════════════════════════════════════════════════════════╝
- */
+/*    ----------------------------------------------------------------------------------------------
+**    §5: Styling at the content grouping level
+*/
+
+/*      ····························································································
+**      >>> §5.1: Lists
+*/
+
 div.column ul:not(.residence-hall-courses):not(.fyf-instructors) {
 	li { list-style-image: url(/wp-content/uploads/sites/53/2016/05/ico-cougar-bullet-point.png); }
 	&.gray-bullets {
@@ -425,4 +468,33 @@ ul.fyf-instructors {
 			}
 		}
 	}
+}
+
+/*    ----------------------------------------------------------------------------------------------
+**    §6: Styling of components
+*/
+
+/*      ····························································································
+**      >>> §6.1: Instructor tables
+*/
+
+.instructor-table {
+	@w--col-1: 288px;
+
+	.column-1 {
+		width: @w--col-1;
+		min-width: @w--col-1;
+	}
+}
+
+
+.instructor-table__photo {
+	border-radius: 7px;
+	display: inline-block;
+	vertical-align: top;
+	width: 96px;
+}
+
+.instructor-table__name {
+	.margin(@mSize-500mx, "left");
 }

@@ -9,6 +9,23 @@
 **  └──────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 
+/*    ──────────────────────────────────────────────────────────────────────────────────────────────
+**    TABLE OF CONTENTS:
+**    ───────────────────────────────────────────────────────────────────────────────────────────
+**    §1: Settings for global Less variables...................................................30
+**    §2: Import of OUE-wide style rules.......................................................37
+**    §3: Styling at body & page level.........................................................51
+**    §4: Styling at the section level.........................................................76
+**      >>> §4.1: Headers......................................................................80
+**         →→→ §4.1.1: Main header.............................................................84
+**      >>> §4.2: Asides......................................................................101
+**    §5: Styling at the content grouping level...............................................123
+**      >>> §5.1: Lists.......................................................................127
+**    §6: Styling of components...............................................................480
+**      >>> §6.1: Instructor tables...........................................................484
+**    ──────────────────────────────────────────────────────────────────────────────────────────────
+*/
+
 /*    ----------------------------------------------------------------------------------------------
 **    §1: Settings for global Less variables
 */
@@ -35,18 +52,7 @@
 */
 
 body {
-	@media all and (max-width: @widescreen-background-width) {
-		background: @hex-crimson;
-	}
-	@media all and (min-width: (@widescreen-background-width+1)) and (max-width: @wuxga-width) {
-		background: @hex-crimson  url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wuxga.jpg) repeat-y fixed right top;
-	}
-	@media all and (min-width: (@wuxga-width+1)) and (max-width: @wqxga-width) {
-		background: @hex-crimson url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wqxga.jpg) repeat-y fixed right top;
-	}
-	@media all and (min-width: (@wqxga-width+1)) {
-		background: @hex-crimson url(/wp-content/uploads/sites/53/2016/05/site-background_fyf_wqxga.jpg) repeat-y fixed 1800px top;
-	}
+	background: extract(@colors--grays__hex, @colors__lightest);
 }
 
 main {
@@ -54,16 +60,7 @@ main {
 }
 
 #binder {
-	@media all and (min-width: (@widescreen-background-width + 1)) {
-		border-right: 1px solid rgba(red(@hex-darker-gray), blue(@hex-darker-gray), green(@hex-darker-gray),0.5);
-		box-shadow: 5px 0 5px rgba(red(@hex-darkest-gray), blue(@hex-darkest-gray), green(@hex-darkest-gray),0.5);
-	}
-}
-
-#jacket {
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	background-attachment: fixed;
+	border-right: 5px solid extract(@colors--grays__hex, @colors__darker);
 }
 
 /*    ----------------------------------------------------------------------------------------------
@@ -80,7 +77,7 @@ main {
 
 header.main-header {
 	&:extend(.has-dflt-font);
-	background: @hex-darker-gray url(/wp-content/uploads/sites/53/2016/05/background_page-header.jpg) center center/cover no-repeat;
+	background: extract(@colors--crimsons__hex, @colors__darkish) url(/wp-content/uploads/sites/53/2018/08/background_main-header_darker-crimson_1188x142.jpg) center center/cover no-repeat;
 	color: #fff !important;
 //	@media all and (min-width: (@widescreen-background-width + 1)) {
 //		border-right: 1px solid rgba(red(@hex-darker-gray), blue(@hex-darker-gray), green(@hex-darker-gray),0.5);

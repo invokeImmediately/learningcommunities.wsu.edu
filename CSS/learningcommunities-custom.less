@@ -38,6 +38,7 @@
 **    §2: Import of OUE-wide style rules
 */
 
+@import "..\WSU-UE---CSS\variables.less";
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 
 /*! ================================================================================================
@@ -316,6 +317,14 @@ div.column ul.residence-hall-courses {
 			}
 			& > p.hidden-info span.course-details {
 				color: multiply(#acb1b1, @drkn-clr);
+			}
+		}
+		&.waller {
+			& > div.title {
+				background: #c69f86 url(https://s3.wp.wsu.edu/uploads/sites/53/2019/08/panel_residance-halls_waller.jpg) no-repeat scroll center top;
+			}
+			& > p.hidden-info span.course-details {
+				color: multiply(#c69f86, @drkn-clr);
 			}
 		}
 		&.wilmer-davis {

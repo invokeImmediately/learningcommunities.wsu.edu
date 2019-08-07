@@ -1,4 +1,4 @@
-﻿@import  'https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif';
+﻿@import  "https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif";
 
 /*! Built with the Less CSS preprocessor [http://lesscss.org/]. Please see [https://github.com/invokeImmediately/learningcommunities.wsu.edu] for a repository of source code. */
 /*! ================================================================================================
@@ -7098,6 +7098,11 @@ ul.fyf-instructors>li.wilmer-davis>p:first-child {
 	margin-left: .5em;
 }
 
+.courses-table .column-5 {
+	width: 300px;
+	max-width: 300px;
+}
+
 /*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 *   ║ MEDIA QUERIES ####################################################################################################### ║
 *   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -8494,5 +8499,41 @@ ul.fyf-instructors>li.wilmer-davis>p:first-child {
 	
 	.column .decoration {
 		display: none;
+	}
+}
+
+/* New print styles added 2019-05-23. */
+@media print {
+	#fund-announcement {
+		display: none;
+	}
+	
+	body.blog .row.side-right .column.one {
+		width: 100% !important;
+	}
+	
+	body.blog .row.side-right .column.two {
+		width: 100% !important;
+	}
+	
+	body.blog .row.side-right p {
+		max-width: none;
+	}
+	
+	body.blog .row.side-right .article-thumbnail {
+		margin-left: 1em;
+	}
+	
+	body.home #wsuwp-main {
+		width: calc(100% - 198px) !important;
+		margin-left: 198px;
+	}
+	
+	body.home #spine {
+		display: block !important;
+	}
+	
+	body.home #spine nav ul ul li {
+		display: block !important;
 	}
 }
